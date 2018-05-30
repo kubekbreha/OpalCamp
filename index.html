@@ -21,6 +21,10 @@
     <!--Custom CSS-->
     <link href="assets/css/custom.css" rel="stylesheet"/>
 
+    <!--Galery-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
+    <link rel="stylesheet" href="node_modules/material-photo-gallery/dist/css/material-photo-gallery.css"/>
+
 </head>
 
 <body class="profile-page sidebar-collapse">
@@ -313,6 +317,38 @@
         </div>
 
 
+        <!--Informacie   FBB24B-->
+        <div class="section text-center" style="background-color: #FFFFFF;">
+            <div class="container">
+                <div class="row ">
+
+                    <div class="col-md-12 ml-auto mr-auto text-center">
+                        <h1 class="title">Galeria</h1>
+                    </div>
+
+                    <div class="col-md-12 ml-auto mr-auto text-center">
+
+                        <div class="m-p-g" style="width: 100%">
+                            <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">
+
+                                <img src="http://unsplash.it/600/400?image=140"
+                                     data-full="http://unsplash.it/1200/800?image=940" class="m-p-g__thumbs-img"/>
+                                <img src="http://unsplash.it/640/450?image=906"
+                                     data-full="http://unsplash.it/1280/900?image=906" class="m-p-g__thumbs-img"/>
+                                <img src="http://unsplash.it/550/420?image=885"
+                                     data-full="http://unsplash.it/1100/840?image=885" class="m-p-g__thumbs-img"/>
+                                <img src="http://unsplash.it/650/450?image=823"
+                                     data-full="http://unsplash.it/1300/900?image=823" class="m-p-g__thumbs-img"/>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
         <!--<div class="section text-center" style="background-color: #4C4C4D;">-->
         <!--<div class="container">-->
         <!--<div class="row ">-->
@@ -418,6 +454,16 @@
 <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
 <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
 <script src="assets/js/material-kit.js?v=2.0.3" type="text/javascript"></script>
+<!--Galery-->
+<script src="node_modules/material-photo-gallery/dist/js/material-photo-gallery.min.js"></script>
+<script>
+    var elem = document.querySelector('.m-p-g');
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var gallery = new MaterialPhotoGallery(elem);
+    });
+</script>
+
 </body>
 
 </html>
