@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf421cf-e400-4ddf-862f-d00282787755" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/node_modules/balanced-match/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/brace-expansion/README.md" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -173,7 +173,7 @@
               <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
               <item name="node_modules" type="462c0819:PsiDirectoryNode" />
-              <item name="balanced-match" type="462c0819:PsiDirectoryNode" />
+              <item name="brace-expansion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
@@ -261,12 +261,12 @@
       <workItem from="1527607372111" duration="10000" />
       <workItem from="1527607384425" duration="10537000" />
       <workItem from="1527657138433" duration="11000" />
-      <workItem from="1527684058236" duration="10752000" />
+      <workItem from="1527684058236" duration="10855000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21310000" />
+    <option name="totallyTimeSpent" value="21413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
