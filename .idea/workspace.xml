@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf421cf-e400-4ddf-862f-d00282787755" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/img/opal_logo_transparent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/galery.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/galery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/demo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/profile-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/examples/profile-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index1.html" beforeDir="false" afterPath="$PROJECT_DIR$/index1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/indexDoc.html" beforeDir="false" afterPath="$PROJECT_DIR$/indexDoc.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index2.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,12 +21,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index2.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index2.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="827">
-              <caret line="254" column="40" selection-start-line="254" selection-start-column="40" selection-end-line="254" selection-end-column="40" />
+            <state relative-caret-position="804">
+              <caret line="307" selection-start-line="307" selection-end-line="307" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -36,26 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexDoc.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/indexDoc.html">
+      <file leaf-file-name="galery.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/galery.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="1234" column="12" lean-forward="true" selection-start-line="1183" selection-start-column="4" selection-end-line="1234" selection-end-column="12" />
-              <folding>
-                <element signature="n#style#0;n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="174">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="landing-page.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/landing-page.html">
+      <file leaf-file-name="galery.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/js/galery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
-              <caret line="126" column="12" lean-forward="true" selection-start-line="87" selection-start-column="3" selection-end-line="126" selection-end-column="12" />
-              <folding>
-                <element signature="e#4545#4551#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -67,6 +61,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -92,9 +87,10 @@
         <option value="$PROJECT_DIR$/assets/css/demo.css" />
         <option value="$PROJECT_DIR$/assets/css/custom.css" />
         <option value="$PROJECT_DIR$/examples/profile-page.html" />
-        <option value="$PROJECT_DIR$/index1.html" />
         <option value="$PROJECT_DIR$/indexDoc.html" />
+        <option value="$PROJECT_DIR$/assets/js/galery.js" />
         <option value="$PROJECT_DIR$/index2.html" />
+        <option value="$PROJECT_DIR$/index1.html" />
       </list>
     </option>
   </component>
@@ -108,9 +104,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="951" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -123,34 +118,6 @@
             <path>
               <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -189,25 +156,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.landing-page.html">
-    <configuration name="index1.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OpalCamp/index1.html" />
+  <component name="RunManager" selected="JavaScript Debug.galery.html">
+    <configuration name="galery.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/OpalCamp/galery.html" />
     <configuration name="indexDoc.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OpalCamp/indexDoc.html" />
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/OpalCamp/index.html" />
+    <configuration name="landing-page.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/OpalCamp/examples/landing-page.html" />
     <configuration name="landing-page.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OpalCamp/examples/landing-page.html" />
-    <configuration name="profile-page.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OpalCamp/examples/profile-page.html" />
-    <configuration name="signup-page.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/OpalCamp/examples/signup-page.html" />
     <list>
-      <item itemvalue="JavaScript Debug.index1.html" />
       <item itemvalue="JavaScript Debug.landing-page.html" />
-      <item itemvalue="JavaScript Debug.signup-page.html" />
-      <item itemvalue="JavaScript Debug.profile-page.html" />
       <item itemvalue="JavaScript Debug.indexDoc.html" />
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JavaScript Debug.landing-page.html (1)" />
+      <item itemvalue="JavaScript Debug.galery.html" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.galery.html" />
+        <item itemvalue="JavaScript Debug.landing-page.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="JavaScript Debug.landing-page.html" />
-        <item itemvalue="JavaScript Debug.indexDoc.html" />
-        <item itemvalue="JavaScript Debug.profile-page.html" />
-        <item itemvalue="JavaScript Debug.index1.html" />
         <item itemvalue="JavaScript Debug.indexDoc.html" />
       </list>
     </recent_temporary>
@@ -223,35 +190,37 @@
       <option name="presentableId" value="Default" />
       <updated>1527607369324</updated>
       <workItem from="1527607372111" duration="10000" />
-      <workItem from="1527607384425" duration="10434000" />
+      <workItem from="1527607384425" duration="10537000" />
+      <workItem from="1527657138433" duration="11000" />
+      <workItem from="1527684058236" duration="2072000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10444000" />
+    <option name="totallyTimeSpent" value="12630000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Gulp" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25316456" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3299389" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.12729125" />
       <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.12729125" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295099" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Gulp" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299389" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,38 +230,72 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/assets/img/bg3.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/documentation.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-869" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/.bin/acorn">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/material-kit.js.map">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="sourcemapFileViewerProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CHANGELOG.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+        <state relative-caret-position="4170">
+          <caret line="278" column="19" selection-start-line="278" selection-start-column="19" selection-end-line="278" selection-end-column="19" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/examples/clem-onojegaw.jpg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/indexDoc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18510">
+          <caret line="1234" column="12" selection-start-line="1183" selection-start-column="4" selection-end-line="1234" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/examples/olu-eletu.jpg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/examples/landing-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="126" column="12" lean-forward="true" selection-start-line="87" selection-start-column="3" selection-end-line="126" selection-end-column="12" />
+          <folding>
+            <element signature="e#4545#4551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3855">
+          <caret line="257" column="41" selection-start-line="257" selection-start-column="41" selection-end-line="257" selection-end-column="41" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/indexDoc.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18510">
+          <caret line="1234" column="12" lean-forward="true" selection-start-line="1183" selection-start-column="4" selection-end-line="1234" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/landing-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="126" column="12" lean-forward="true" selection-start-line="87" selection-start-column="3" selection-end-line="126" selection-end-column="12" />
+          <folding>
+            <element signature="e#4545#4551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/documentation.html" />
+    <entry file="file://$PROJECT_DIR$/CHANGELOG.md" />
     <entry file="file://$PROJECT_DIR$/assets/js/material-kit.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="717">
@@ -303,14 +306,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/faces/avatar.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/demo/demo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2859" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/demo/demo.css" />
     <entry file="file://$PROJECT_DIR$/assets/css/material-kit.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-7621" />
@@ -328,9 +324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -339,18 +332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/opal_logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/opal_logo_transparent.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/profile-page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -358,48 +339,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/landing-page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="126" column="12" lean-forward="true" selection-start-line="87" selection-start-column="3" selection-end-line="126" selection-end-column="12" />
-          <folding>
-            <element signature="e#4545#4551#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/img/opal_title.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/indexDoc.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="1234" column="12" lean-forward="true" selection-start-line="1183" selection-start-column="4" selection-end-line="1234" selection-end-column="12" />
+        <state relative-caret-position="-430">
+          <caret line="1234" column="12" selection-start-line="1183" selection-start-column="4" selection-end-line="1234" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#9;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index2.html">
+    <entry file="file://$PROJECT_DIR$/examples/landing-page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="827">
-          <caret line="254" column="40" selection-start-line="254" selection-start-column="40" selection-end-line="254" selection-end-column="40" />
+        <state relative-caret-position="32">
+          <caret line="69" column="12" lean-forward="true" selection-start-line="69" selection-start-column="12" selection-end-line="69" selection-end-column="12" />
+          <folding>
+            <element signature="e#4545#4551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/js/galery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="804">
+          <caret line="307" selection-start-line="307" selection-end-line="307" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/galery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
         </state>
       </provider>
     </entry>
