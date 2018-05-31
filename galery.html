@@ -4,7 +4,7 @@
     <title>Material Photo Gallery</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="node_modules/material-photo-gallery/dist/css/material-photo-gallery.css" />
+    <link rel="stylesheet" href="assets/material-photo-gallery/dist/css/material-photo-gallery.css" />
 
 
     <style>
@@ -49,7 +49,22 @@
     <div class="m-p-g__fullscreen"></div>
 </div>
 
-<script src="node_modules/material-photo-gallery/dist/js/material-photo-gallery.min.js"></script>
+
+<!--  Firebase  -->
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",
+        authDomain: "opal-1526306570324.firebaseapp.com",
+        databaseURL: "https://opal-1526306570324.firebaseio.com",
+        projectId: "opal-1526306570324",
+        storageBucket: "opal-1526306570324.appspot.com",
+        messagingSenderId: "809694766352"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="assets/material-photo-gallery/dist/js/material-photo-gallery.min.js"></script>
 <script>
     var elem = document.querySelector('.m-p-g');
 
