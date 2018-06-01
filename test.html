@@ -34,6 +34,18 @@
     firebase.initializeApp(config);
     //-------------------------------------
 
+    var database = firebase.database();
+    function uploadNewPhoto(imageUrl, album) {
+        var refAlbum = database.ref(album);
+        refAlbum.push(imageUrl).then(function onSuccess(res) {
+            console.log(res)
+        }).catch(function onError(err) {
+            console.log(err)
+        });
+    }
+
+
+
     var uploader = document.getElementById('uploader');
     var fileButton =         document.getElementById('fileButton');
     fileButton.addEventListener('change', function(e){
@@ -62,6 +74,7 @@
             // For instance, get the download URL: https://firebasestorage.googleapis.com/...
             task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
                 console.log('File available at', downloadURL);
+                uploadNewPhoto(downloadURL, "test");
             });
         });
     });

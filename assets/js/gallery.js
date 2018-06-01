@@ -11,8 +11,8 @@
 //         console.log(err)
 //     });
 // }
-//
-//
+
+
 
 // function loadPhotos(album) {
 //     var leadsRef = database.ref(album);
@@ -23,18 +23,5 @@
 //         });
 //     });
 // }
-
-
-let storageRef = firebase.storage().ref('photos/myPictureName');
-let fileUpload = document.getElementById("cameraInput");
-
-fileUpload.addEventListener('change', function (evt) {
-    let firstFile = evt.target.files[0]; // upload the first file only
-    let uploadTask = storageRef.put(firstFile);
-    uploadTask.getDownloadURL().then(function (url) {
-        // Execute (unknown)
-        console.log( url);
-    });
-});
 
 
