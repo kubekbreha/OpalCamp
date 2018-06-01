@@ -14,7 +14,7 @@
 <div class="mainDiv" align="right">
     <h1 align="left">Firebase File Upload</h1>
     <progress id="uploader" value="0" max="100">0%</progress>
-    <input type="file" accept="image/*" capture="camera" id="fileButton" value="upload"/>
+    <input type="file" accept="image/*" capture="camera" id="fileButton" value="upload" multiple=""/>
 
 </div>
 
@@ -36,7 +36,7 @@
 
     var database = firebase.database();
     function uploadNewPhoto(imageUrl, album) {
-        var refAlbum = database.ref(album);
+        var refAlbum = database.ref('gallery/' + album);
         refAlbum.push(imageUrl).then(function onSuccess(res) {
             console.log(res)
         }).catch(function onError(err) {
@@ -45,43 +45,42 @@
     }
 
 
+    var fileButton = document.getElementById('fileButton');
 
-    var uploader = document.getElementById('uploader');
-    var fileButton =         document.getElementById('fileButton');
     fileButton.addEventListener('change', function(e){
-        var file = e.target.files[0];
-        var storageRef = firebase.storage().ref('img/'+file.name);
-        var task = storageRef.put(file);
+        for(var i = 0; i < fileButton.files.length; i++) {
 
+            var file = e.target.files[i];
+            var storageRef = firebase.storage().ref('Start_2017/' + file.name);
+            var task = storageRef.put(file);
 
-        task.on('state_changed', function(snapshot){
-            // Observe state change events such as progress, pause, and resume
-            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-            console.log('Upload is ' + progress + '% done');
-            switch (snapshot.state) {
-                case firebase.storage.TaskState.PAUSED: // or 'paused'
-                    console.log('Upload is paused');
-                    break;
-                case firebase.storage.TaskState.RUNNING: // or 'running'
-                    console.log('Upload is running');
-                    break;
-            }
-        }, function(error) {
-            // Handle unsuccessful uploads
-        }, function() {
-            // Handle successful uploads on complete
-            // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-            task.snapshot.ref.getDownloadURL().then(function(downloadURL) {
-                console.log('File available at', downloadURL);
-                uploadNewPhoto(downloadURL, "test");
+            task.on('state_changed', function (snapshot) {
+                // Observe state change events such as progress, pause, and resume
+                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                console.log('Upload is ' + progress + '% done');
+                switch (snapshot.state) {
+                    case firebase.storage.TaskState.PAUSED: // or 'paused'
+                        console.log('Upload is paused');
+                        break;
+                    case firebase.storage.TaskState.RUNNING: // or 'running'
+                        console.log('Upload is running');
+                        break;
+                }
+            }, function (error) {
+                // Handle unsuccessful uploads
+            }, function () {
+                // Handle successful uploads on complete
+                // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+                task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                    console.log('File available at', downloadURL);
+                    uploadNewPhoto(downloadURL, "Start_2017");
+                });
             });
-        });
+        }
     });
 
-
 </script>
-
 
 </body>
 </html>
