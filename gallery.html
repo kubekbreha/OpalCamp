@@ -4,7 +4,7 @@
     <title>Material Photo Gallery</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css">
-    <link rel="stylesheet" href="assets/material-photo-gallery/dist/css/material-photo-gallery.css" />
+    <link rel="stylesheet" href="assets/material-photo-gallery/dist/css/material-photo-gallery.css"/>
 
 
     <style>
@@ -29,44 +29,16 @@
     </style>
 </head>
 <body>
-<h2>Starsi 2017</h2>
+<h2>Start 2017</h2>
 
 
-<input type="file" onchange="onFileSelected(event)">
-<img id="myimage" height="200">
+<div class="m-p-g">
+    <div class="m-p-g__thumbs" data-google-image-layout data-max-height="350" id="test">
 
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--<div class="m-p-g">-->
-    <!--<div class="m-p-g__thumbs" data-google-image-layout data-max-height="350">-->
-
-        <!--<img src="http://unsplash.it/600/400?image=140" data-full="http://unsplash.it/1200/800?image=940" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/640/450?image=906" data-full="http://unsplash.it/1280/900?image=906" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/550/420?image=885" data-full="http://unsplash.it/1100/840?image=885" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/650/450?image=823" data-full="http://unsplash.it/1300/900?image=823" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/600/350?image=815" data-full="http://unsplash.it/1200/700?image=815" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/560/500?image=677" data-full="http://unsplash.it/1120/1000?image=677" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/670/410?image=401" data-full="http://unsplash.it/1340/820?image=401" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/620/340?image=623" data-full="http://unsplash.it/1240/680?image=623" class="m-p-g__thumbs-img" />-->
-        <!--<img src="http://unsplash.it/790/390?image=339" data-full="http://unsplash.it/1580/780?image=339" class="m-p-g__thumbs-img" />-->
-
-    <!--</div>-->
-
-    <!--<div class="m-p-g__fullscreen"></div>-->
-<!--</div>-->
+    <div class="m-p-g__fullscreen"></div>
+</div>
 
 
 <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
@@ -84,12 +56,13 @@
     };
     firebase.initializeApp(config);
 </script>
+
 <script src="assets/material-photo-gallery/dist/js/material-photo-gallery.min.js"></script>
 <script src="assets/js/gallery.js"></script>
 <script>
     var elem = document.querySelector('.m-p-g');
 
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
         var gallery = new MaterialPhotoGallery(elem);
     });
 </script>

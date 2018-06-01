@@ -13,13 +13,21 @@ function uploadNewPhoto(imageUrl, album) {
 }
 
 function loadPhotos(album) {
-    var leadsRef = database.ref(album);
+
+    var target = document.getElementById('test');
+    var leadsRef = database.ref('gallery/' + album);
     leadsRef.on("value", function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
             var childData = childSnapshot.val();
-            console.log(childData);
+            var str = '<img src="' + childData + '" data-full="' + childData + '" class="m-p-g__thumbs-img" />';
+            var temp = document.createElement('div');
+            temp.innerHTML = str;
+            while (temp.firstChild) {
+                target.appendChild(temp.firstChild);
+
+            }
         });
     });
 }
 
-
+loadPhotos('Start_2017');
