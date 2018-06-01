@@ -27,36 +27,12 @@
 
 
 
-function onFileSelected(event) {
-    var selectedFile = event.target.files[0];
-    var reader = new FileReader();
-
-    var imgtag = document.getElementById("myimage");
-    imgtag.title = selectedFile.name;
-
-    reader.onload = function(event) {
-        imgtag.src = event.target.result;
-    };
-
-    reader.readAsDataURL(selectedFile);
-}
 
 
+let storageRef = firebase.storage().ref('photos/myPictureName')
+let fileUpload = document.getElementById("cameraInput")
 
-
-// const ref = firebase.storage().ref();
-// const file = '../img/opal_title.jpg';
-// const name = (+new Date()) + '-' + file.name;
-// const metadata = {
-//     contentType: file.type
-// };
-// const task = ref.child(name).put(file, metadata);
-// task.then((snapshot) => {
-//     const url = snapshot.downloadURL;
-//     console.log(url);
-//     document.querySelector('#someImageTagID').src = url;
-// }).catch((error) => {
-//     console.error(error);
-// });
-
-
+fileUpload.addEventListener('change', function(evt) {
+    let firstFile = evt.target.files[0] // upload the first file only
+    let uploadTask = storageRef.put(firstFile)
+})
