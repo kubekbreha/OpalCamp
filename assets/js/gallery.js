@@ -1,6 +1,11 @@
 // Get a reference to the database service
 $(document).ready(function () {
 
+    var urlAlbum = window.location.href;
+    var formatedAlbum = urlAlbum.split('#').pop();
+
+    document.getElementById("album_name").innerHTML = formatedAlbum;
+
     var database = firebase.database();
 
     function uploadNewPhoto(imageUrl, album) {
@@ -31,5 +36,5 @@ $(document).ready(function () {
     }
 
 
-    loadPhotos('Start_2017');
+    loadPhotos(formatedAlbum);
 });
