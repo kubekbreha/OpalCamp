@@ -19,7 +19,7 @@ function loadPhotos(album) {
     leadsRef.on("value", function (snapshot) {
         snapshot.forEach(function (childSnapshot) {
             var childData = childSnapshot.val();
-            var str = '<img src="' + childData + '" data-full="' + childData + '" class="m-p-g__thumbs-img" />';
+            var  str = '<img style="height: 45%; width: 45%;" src="' + childData + '" data-full="' + childData + '" class="m-p-g__thumbs-img" />';
             var temp = document.createElement('div');
             temp.innerHTML = str;
             while (temp.firstChild) {
