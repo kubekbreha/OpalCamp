@@ -63,7 +63,7 @@
         //Handle waiting to upload each file using promise
         function uploadImageAsPromise(imageFile) {
             return new Promise(function (resolve, reject) {
-                var storageRef = firebase.storage().ref('Start_2017/' + imageFile.name);
+                var storageRef = firebase.storage().ref('Extrem_2017/' + imageFile.name);
 
                 //Upload file
                 var task = storageRef.put(imageFile);
@@ -88,7 +88,7 @@
                     function complete() {
                         task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
                             console.log('File available at', downloadURL);
-                            uploadNewPhoto(downloadURL, "Start_2017");
+                            uploadNewPhoto(downloadURL, "Extrem_2017");
                         });
                     }
                 );
