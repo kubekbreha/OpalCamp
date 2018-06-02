@@ -19,7 +19,8 @@
 </div>
 
 
-
+<script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+<!--  Firebase  -->
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script>
     // Initialize Firebase
@@ -34,52 +35,66 @@
     firebase.initializeApp(config);
     //-------------------------------------
 
-    var database = firebase.database();
-    function uploadNewPhoto(imageUrl, album) {
-        var refAlbum = database.ref('gallery/' + album);
-        refAlbum.push(imageUrl).then(function onSuccess(res) {
-            console.log(res)
-        }).catch(function onError(err) {
-            console.log(err)
-        });
-    }
+    $(document).ready(function () {
 
+        var database = firebase.database();
 
-    var fileButton = document.getElementById('fileButton');
-
-    fileButton.addEventListener('change', function(e){
-        for(var i = 0; i < fileButton.files.length; i++) {
-
-            var file = e.target.files[i];
-            var storageRef = firebase.storage().ref('Start_2017/' + file.name);
-            var task = storageRef.put(file);
-
-            task.on('state_changed', function (snapshot) {
-                // Observe state change events such as progress, pause, and resume
-                // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log('Upload is ' + progress + '% done');
-                switch (snapshot.state) {
-                    case firebase.storage.TaskState.PAUSED: // or 'paused'
-                        console.log('Upload is paused');
-                        break;
-                    case firebase.storage.TaskState.RUNNING: // or 'running'
-                        console.log('Upload is running');
-                        break;
-                }
-            }, function (error) {
-                // Handle unsuccessful uploads
-            }, function () {
-                // Handle successful uploads on complete
-                // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-                task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
-                    console.log('File available at', downloadURL);
-                    uploadNewPhoto(downloadURL, "Start_2017");
-                });
+        function uploadNewPhoto(imageUrl, album) {
+            var refAlbum = database.ref('gallery/' + album);
+            refAlbum.push(imageUrl).then(function onSuccess(res) {
+                console.log(res)
+            }).catch(function onError(err) {
+                console.log(err)
             });
         }
-    });
 
+
+        var fileButton = document.getElementById('fileButton');
+
+        fileButton.addEventListener('change', function (e) {
+            //Get files
+            for (var i = 0; i < e.target.files.length; i++) {
+                var imageFile = e.target.files[i];
+
+                uploadImageAsPromise(imageFile);
+            }
+        });
+
+        //Handle waiting to upload each file using promise
+        function uploadImageAsPromise(imageFile) {
+            return new Promise(function (resolve, reject) {
+                var storageRef = firebase.storage().ref('Start_2017/' + imageFile.name);
+
+                //Upload file
+                var task = storageRef.put(imageFile);
+
+                //Update progress bar
+                task.on('state_changed',
+                    function progress(snapshot) {
+                        var progress = snapshot.bytesTransferred / snapshot.totalBytes * 100;
+                        console.log('Upload is ' + progress + '% done');
+                        switch (snapshot.state) {
+                            case firebase.storage.TaskState.PAUSED: // or 'paused'
+                                console.log('Upload is paused');
+                                break;
+                            case firebase.storage.TaskState.RUNNING: // or 'running'
+                                console.log('Upload is running');
+                                break;
+                        }
+                    },
+                    function error(err) {
+
+                    },
+                    function complete() {
+                        task.snapshot.ref.getDownloadURL().then(function (downloadURL) {
+                            console.log('File available at', downloadURL);
+                            uploadNewPhoto(downloadURL, "Start_2017");
+                        });
+                    }
+                );
+            });
+        }
+    })
 </script>
 
 </body>
