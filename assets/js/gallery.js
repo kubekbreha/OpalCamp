@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     document.getElementById("album_name").innerHTML = formatedAlbum;
 
-    var database = firebase.database();
+    //var database = firebase.database();
 
     function uploadNewPhoto(imageUrl, album) {
         var refAlbum = database.ref(album);
@@ -29,12 +29,31 @@ $(document).ready(function () {
                 temp.innerHTML = str;
                 while (temp.firstChild) {
                     target.appendChild(temp.firstChild);
-
                 }
             });
         });
     }
 
+    var target = document.getElementById('test');
+    if(!formatedAlbum.localeCompare('Start_2017')) {
+        for (var x = 2; x <= 216; x++) {
+            var str = '<img  src="assets/img/2017_start/start_' + x + '.jpg" data-full="assets/img/2017_start/start_' + x + '.jpg" class="m-p-g__thumbs-img" />';
+            var temp = document.createElement('div');
+            temp.innerHTML = str;
+            while (temp.firstChild) {
+                target.appendChild(temp.firstChild);
+            }
+        }
+    }else if(!formatedAlbum.localeCompare('Extrem_2017')){
+        for (var x = 1; x <= 189; x++) {
+            var str = '<img  src="assets/img/2017_extrem/extrem_' + x + '.jpg" data-full="assets/img/2017_extrem/extrem_' + x + '.jpg" class="m-p-g__thumbs-img" />';
+            var temp = document.createElement('div');
+            temp.innerHTML = str;
+            while (temp.firstChild) {
+                target.appendChild(temp.firstChild);
+            }
+        }
+    }
 
-    loadPhotos(formatedAlbum);
+
 });
