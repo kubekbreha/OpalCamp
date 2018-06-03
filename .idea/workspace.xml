@@ -2,6 +2,223 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bf421cf-e400-4ddf-862f-d00282787755" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5259-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5259.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5261.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5265.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5327.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5370.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5376.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5392.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5404.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5444.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5462.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5467.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5489.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5493.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5518.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5522.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5547.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5553.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5567.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5599.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5612.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5618.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5645.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5664.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5666.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5689.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5713.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5748.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5772.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5778.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5808.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5827.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5843.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5873.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5879.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_5990.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6020.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6059.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6069.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6098.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6143.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6145.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6157.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6178.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6217.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6237.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6264.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6268.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6269.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6275.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6281.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6285.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6289.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6306.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6308.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6310.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6341.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6345.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6369.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6374.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6403.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6404.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6416.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6420.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6423.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6427.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6440.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6454.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6456.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6487.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6515.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6523.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6524.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6527.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6559.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6568.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6569.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6588.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6616.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6639.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6650.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6667.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6675.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6704.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6710.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6712.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6714.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6717.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6727.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6737.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6745.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6752.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6760.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6783.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6797.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6840.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6851.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6857.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6861.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6871.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6879.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6887.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6890.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6892.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6900.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6906.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6911.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6924.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6927.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6929.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6932.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6936.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6956.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6963.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6979.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6982.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_6985.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7024.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7028.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7033.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7044.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7049.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7060.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7062.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7065.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7073.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7083.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7107.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7145.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7147.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7157.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7158.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7161.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7169.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7172.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7178.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7184.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7215.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7310.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7323.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7330.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7356.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7374.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7382.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7399.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7410.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7419.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7421.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7430.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7431.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7434.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7441.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7454.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7489.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7494.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7495.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7511.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7528.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7530.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7549.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7578.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7584.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7610.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7638.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7643.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7655.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7662.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7682.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7691.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7694.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7697.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7714.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7726.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7733.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7738.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7757.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7765.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7776.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7779.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7784.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7801.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7803.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7832.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7835.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7840.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7852.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7858.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7864.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7925.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7944.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7950.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7964.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7994.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7996.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7997.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_7999.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8021.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8022.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8025.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8026.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8032.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8035.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8037.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8040.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8041.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8047.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8056.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8059.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8062.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/2017_start/IMG_8074.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -19,8 +236,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
-              <caret line="208" column="92" selection-start-line="208" selection-start-column="92" selection-end-line="208" selection-end-column="92" />
+            <state relative-caret-position="-7716">
+              <caret line="219" column="58" selection-start-line="219" selection-start-column="58" selection-end-line="219" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -47,7 +264,7 @@
         <entry file="file://$PROJECT_DIR$/assets/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
@@ -56,7 +273,7 @@
         <entry file="file://$PROJECT_DIR$/assets/css/custom_gallery.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -169,20 +386,7 @@
               <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
               <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
               <item name="img" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="OpalCamp" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="img" type="462c0819:PsiDirectoryNode" />
-              <item name="taborisko" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OpalCamp" type="b2602c69:ProjectViewProjectNode" />
@@ -213,10 +417,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/img/2017_extrem" />
+      <recent name="$PROJECT_DIR$/assets/img/2017_start" />
       <recent name="$PROJECT_DIR$/assets/img/taborisko" />
       <recent name="$PROJECT_DIR$/assets/img" />
       <recent name="$PROJECT_DIR$/assets" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets/js" />
@@ -276,16 +481,15 @@
       <workItem from="1527784486554" duration="6091000" />
       <workItem from="1527846318048" duration="11740000" />
       <workItem from="1527911770979" duration="13294000" />
-      <workItem from="1528003021881" duration="7521000" />
+      <workItem from="1528003021881" duration="8485000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64802000" />
+    <option name="totallyTimeSpent" value="65766000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25316456" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -677,21 +881,21 @@
     <entry file="file://$PROJECT_DIR$/assets/css/custom_gallery.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="208" column="92" selection-start-line="208" selection-start-column="92" selection-end-line="208" selection-end-column="92" />
+        <state relative-caret-position="-7716">
+          <caret line="219" column="58" selection-start-line="219" selection-start-column="58" selection-end-line="219" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
