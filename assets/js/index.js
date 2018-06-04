@@ -1,3 +1,6 @@
+
+var database = firebase.database();
+
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -47,31 +50,91 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if ($('#opalStart').is(":checked") === false && $('#opalPro').is(":checked") === false) {
+    if (opalStart === false && opalPro === false) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyberte tábor ktorého sa chcete zúčastniť');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
-    if ($('#opalStart').is(":checked") === true && $('#opalPro').is(":checked") === true) {
+    if (opalStart === true && opalPro === true) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyberte iba jeden tábor ktorého sa chcete zúčastniť');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
-    if(inputAllRight){
-        
 
+    if(inputAllRight) {
+        if (opalStart === true) {
+            var myJson = {
+                kidName: {kidName},
+                kidBorn: {kidBorn},
+                kidPhone: {kidPhone},
+                kidMail: {kidMail},
+                kidAddress: {kidAddress},
+                kidCity: {kidCity},
+                kidSchool: {kidSchool},
+                kidHealth: {kidHealth},
+                kidNote: {kidNote},
+                parentName: {parentName},
+                parentPhone: {parentPhone},
+                parentMail: {parentMail}
+            };
+            uploadNewRegistration('start', myJson);
 
+        }else{
+            var myJson = {
+                kidName: {kidName},
+                kidBorn: {kidBorn},
+                kidPhone: {kidPhone},
+                kidMail: {kidMail},
+                kidAddress: {kidAddress},
+                kidCity: {kidCity},
+                kidSchool: {kidSchool},
+                kidHealth: {kidHealth},
+                kidNote: {kidNote},
+                parentName: {parentName},
+                parentPhone: {parentPhone},
+                parentMail: {parentMail}
+            };
+            uploadNewRegistration('pro', myJson);
+        }
 
+        $("#opalStart").prop("checked", false);
+        $("#opalPro").prop("checked", false);
+        document.getElementById("kidName").value = "";
+        document.getElementById("kidBorn").value = "";
+        document.getElementById("kidPhone").value = "";
+        document.getElementById("kidMail").value = "";
+
+        document.getElementById("kidAddress").value = "";
+        document.getElementById("kidCity").value = "";
+        document.getElementById("kidSchool").value = "";
+
+        document.getElementById("kidHealth").value = "";
+        document.getElementById("kidNote").value = "";
+
+        document.getElementById("parentName").value = "";
+        document.getElementById("parentPhone").value = "";
+        document.getElementById("parentMail").value = "";
 
     }
-
-
 }
 
+
+function uploadNewRegistration(camp ,imageUrl) {
+    var refAlbum = database.ref('registration/'+ camp);
+    refAlbum.push(imageUrl).then(function onSuccess(res) {
+        console.log(res)
+        var div = document.createElement('div');
+        div.innerHTML = getSuccessMessage();
+        document.getElementById('formError').appendChild(div);
+        inputAllRight = false;
+    }).catch(function onError(err) {
+        console.log(err)
+    });
+}
 
 function getErrorMessage(error) {
     return '<div class="alert alert-danger">\n' +
@@ -83,6 +146,21 @@ function getErrorMessage(error) {
         '<span aria-hidden="true"><i class="material-icons">clear</i></span>\n' +
         '</button>\n' +
         '<b>Chyba:</b>\t  ' + error + ' .\n' +
+        '</div>\n' +
+        '</div>';
+}
+
+
+function getSuccessMessage() {
+    return '<div class="alert alert-success">\n' +
+        '<div class="container">\n' +
+        '<div class="alert-icon">\n' +
+        '<i class="material-icons">check</i>\n' +
+        '</div>\n' +
+        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+        '<span aria-hidden="true"><i class="material-icons">clear</i></span>\n' +
+        '</button>\n' +
+        'Učastník úspešne registrovaný.\n' +
         '</div>\n' +
         '</div>';
 }
