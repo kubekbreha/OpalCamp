@@ -21,7 +21,7 @@
     var urlAlbum = window.location.href;
     var formatedAlbum = urlAlbum.split('#').pop();
 
-    if (!formatedAlbum.localeCompare('Pro_2017')) {
+    if (formatedAlbum === 'Pro_2017') {
         var div = document.createElement('div');
         div.className = 'row';
         div.innerHTML = '<ins class="pa-widget-gallery" style="width:100%; height:' + $(window).height() + 'px;"\n' +
@@ -30,23 +30,27 @@
             '    data-delay="5"\n' +
             '        ></ins>';
         document.getElementById('test').appendChild(div);
-    } else if (!formatedAlbum.localeCompare('Extrem_2017')) {
+    } else if (formatedAlbum === 'Extrem_2017') {
+        console.log('extrem');
+
         var div = document.createElement('div');
         div.className = 'row';
         div.innerHTML = '<ins class="pa-widget-gallery" style="width:100%; height:' + $(window).height() + 'px;"\n' +
             '    data-url="https://photos.app.goo.gl/CqoxDJwYR1SsRDB73"\n' +
-            '    data-uid="efc708deb25cefe2ba6f31a0a8f6a48eb799950617414e658dd7ffef5f35cf29"\n' +
+            '    data-uid="5c2535ddfdbe9060d746dca0462f390bebc369939333ab84f3f713e458462f76"\n' +
             '    data-delay="5"\n' +
-            '        ></ins>';
+            '></ins>';
+
         document.getElementById('test').appendChild(div);
-    }else if (!formatedAlbum.localeCompare('Start_2017')) {
+    }else if (formatedAlbum === 'Start_2017') {
+        console.log('start');
         var div = document.createElement('div');
         div.className = 'row';
         div.innerHTML = '<ins class="pa-widget-gallery" style="width:100%; height:' + $(window).height() + 'px;"\n' +
             '    data-url="https://goo.gl/photos/RHx9ppfwjwgu5wuTA"\n' +
-            '    data-uid="efc708deb25cefe2ba6f31a0a8f6a48eb799950617414e658dd7ffef5f35cf29"\n' +
+            '    data-uid="a9b42b7b6ac59c538c8d28b53b7a4a51849c9f01b4c13649ed7d1bc6ce4f1cc7"\n' +
             '    data-delay="5"\n' +
-            '        ></ins>';
+            '></ins>';
         document.getElementById('test').appendChild(div);
     }
 
