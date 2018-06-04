@@ -35,7 +35,8 @@
             <a href="javascript:void(0);" class="navbar-brand" onclick="topFunction()"
                style="margin-left: 1em;">
                 Opál Camp </a>
-            <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse"
+                    aria-expanded="false"
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
@@ -405,7 +406,7 @@
                 </div>
                 <div class="col-md-12 ml-auto mr-auto">
                     <div class="card card-signup">
-                        <form class="form " method="" action="">
+                        <form id="registration_form" class="form">
                             <div class="card-body ">
                                 <div class="container">
 
@@ -422,7 +423,10 @@
                                         <div class="col-md-6  ml-auto mr-auto">
                                             <div class="form-check has-warning">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input " type="checkbox" value="">
+                                                    <label style="color: #FBB24B;" for="opalStart"
+                                                           class="bmd-label-floating">*</label>
+                                                    <input id="opalStart" class="form-check-input " type="checkbox"
+                                                           value="">
                                                     Opál Camp ŠTART (15.-21. júl 2018) (10-13 rokov)
                                                     <span class="form-check-sign">
                                                       <span class="check"></span>
@@ -434,7 +438,10 @@
                                         <div class="col-md-6  ml-auto mr-auto">
                                             <div class="form-check ">
                                                 <label class="form-check-label">
-                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    <label style="color: #FBB24B;" for="opalPro"
+                                                           class="bmd-label-floating">*</label>
+                                                    <input id="opalPro" class="form-check-input" type="checkbox"
+                                                           value="">
                                                     Opál Camp PRO (8.-14. júl 2018) (14-18 rokov)
                                                     <span class="form-check-sign">
                                                               <span class="check"></span>
@@ -456,11 +463,13 @@
                                             <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
                                                       <span class="input-group-text">
-                                                          <i class="material-icons">group</i>
+                                                          <i class="material-icons">face</i>
                                                       </span>
                                                 </div>
-                                                <input type="text" placeholder="Meno a priezdvisko ..."
+                                                <label style="color: #FBB24B;" for="kidName" class="bmd-label-floating">*</label>
+                                                <input id="kidName" type="text" placeholder="Meno a priezdvisko ..."
                                                        class="form-control"/>
+
                                             </div>
                                         </div>
 
@@ -472,7 +481,8 @@
                                                      <i class="material-icons">today</i>
                                                     </span>
                                                 </div>
-                                                <input type="date" class="form-control"
+                                                <label style="color: #FBB24B;" for="kidBorn" class="bmd-label-floating">*</label>
+                                                <input id="kidBorn" type="date" class="form-control"
                                                        placeholder="Datum nerodienia...">
                                             </div>
                                         </div>
@@ -487,7 +497,9 @@
                                                         <i class="material-icons">phone</i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" class="form-control"
+                                                <label style="color: #FBB24B;" for="kidPhone"
+                                                       class="bmd-label-floating">*</label>
+                                                <input id="kidPhone" type="tel" class="form-control"
                                                        placeholder="Telefónne číslo...">
                                             </div>
                                         </div>
@@ -500,7 +512,9 @@
                                                         <i class="material-icons">email</i>
                                                     </span>
                                                 </div>
-                                                <input type="email" class="form-control" placeholder="Email...">
+                                                <label style="color: #FBB24B;" for="kidMail" class="bmd-label-floating">*</label>
+                                                <input id="kidMail" type="email" class="form-control"
+                                                       placeholder="Email...">
                                             </div>
                                         </div>
                                     </div>
@@ -519,7 +533,9 @@
                                                         <i class="material-icons">home</i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" class="form-control"
+                                                <label style="color: #FBB24B;" for="kidAddress"
+                                                       class="bmd-label-floating">*</label>
+                                                <input id="kidAddress" type="text" class="form-control"
                                                        placeholder="Ulica a číslo domu ...">
                                             </div>
                                         </div>
@@ -531,7 +547,9 @@
                                                         <i class="material-icons">location_city</i>
                                                     </span>
                                                 </div>
-                                                <input type="email" class="form-control" placeholder="PSČ a mesto ...">
+                                                <label style="color: #FBB24B;" for="kidCity" class="bmd-label-floating">*</label>
+                                                <input id="kidCity" type="text" class="form-control"
+                                                       placeholder="PSČ a mesto ...">
                                             </div>
                                         </div>
 
@@ -542,7 +560,8 @@
                                                         <i class="material-icons">school</i>
                                                     </span>
                                                 </div>
-                                                <input type="email" class="form-control" placeholder="Škola, trieda...">
+                                                <input id="kidSchool" type="text" class="form-control"
+                                                       placeholder="Škola, trieda...">
                                             </div>
                                         </div>
                                     </div>
@@ -560,7 +579,7 @@
                                                         <i class="material-icons">local_hospital</i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" class="form-control"
+                                                <input id="kidHealth" type="text" class="form-control"
                                                        placeholder="Zdravotný stav, alergia, prekonané ochorenie, obmedzenia, stravovanie...">
                                             </div>
                                         </div>
@@ -574,7 +593,7 @@
                                                         <i class="material-icons">add</i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" class="form-control"
+                                                <input id="kidNote" type="text" class="form-control"
                                                        placeholder="Poznámka pre usporiadateľa...">
                                             </div>
                                         </div>
@@ -587,37 +606,43 @@
 
                                     <div class="row">
                                         <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="orm-group input-group has-warning">
+                                            <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <i class="material-icons">face</i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" class="form-control"
-                                                       placeholder="Meno a prizdvisko...">
+                                                <label style="color: #FBB24B;" for="parentName"
+                                                       class="bmd-label-floating">*</label>
+                                                <input id="parentName" type="text" class="form-control"
+                                                       placeholder="Meno a prezdvisko...">
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="orm-group input-group has-warning">
+                                            <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <i class="material-icons">phone</i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" class="form-control"
+                                                <label style="color: #FBB24B;" for="parentPhone"
+                                                       class="bmd-label-floating">*</label>
+                                                <input id="parentPhone" type="tel" class="form-control"
                                                        placeholder="Telefónne číslo...">
                                             </div>
                                         </div>
 
                                         <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="orm-group input-group has-warning ">
+                                            <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <i class="material-icons">email</i>
                                                     </span>
                                                 </div>
-                                                <input type="tel" class="form-control"
+                                                <label style="color: #FBB24B;" for="parentMail"
+                                                       class="bmd-label-floating">*</label>
+                                                <input id="parentMail" type="email" class="form-control"
                                                        placeholder="Email...">
                                             </div>
                                         </div>
@@ -631,6 +656,11 @@
                                             </button>
 
                                         </div>
+                                    </div>
+
+                                    <div id="formError">
+
+
                                     </div>
 
 
@@ -743,16 +773,16 @@
 <!--&lt;!&ndash;  Firebase  &ndash;&gt;-->
 <!--<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>-->
 <!--<script>-->
-    <!--// Initialize Firebase-->
-    <!--var config = {-->
-        <!--apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",-->
-        <!--authDomain: "opal-1526306570324.firebaseapp.com",-->
-        <!--databaseURL: "https://opal-1526306570324.firebaseio.com",-->
-        <!--projectId: "opal-1526306570324",-->
-        <!--storageBucket: "opal-1526306570324.appspot.com",-->
-        <!--messagingSenderId: "809694766352"-->
-    <!--};-->
-    <!--firebase.initializeApp(config);-->
+<!--// Initialize Firebase-->
+<!--var config = {-->
+<!--apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",-->
+<!--authDomain: "opal-1526306570324.firebaseapp.com",-->
+<!--databaseURL: "https://opal-1526306570324.firebaseio.com",-->
+<!--projectId: "opal-1526306570324",-->
+<!--storageBucket: "opal-1526306570324.appspot.com",-->
+<!--messagingSenderId: "809694766352"-->
+<!--};-->
+<!--firebase.initializeApp(config);-->
 <!--</script>-->
 
 <!--   Core JS Files   -->
