@@ -35,7 +35,7 @@
             <a href="javascript:void(0);" class="navbar-brand" onclick="topFunction()"
                style="margin-left: 1em;">
                 Opal Camp </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
+            <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                     aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 <span class="navbar-toggler-icon"></span>
@@ -51,40 +51,40 @@
 
                 <li class="nav-item">
                     <a class="nav-link about_us" data-placement="bottom"
-                       href="#about_us">O nás</a>
+                       href="#about_us" onclick="colapseSideNav()">O nás</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" data-placement="bottom"
-                       href="#info">Informacie</a>
+                       href="#info" onclick="colapseSideNav()">Informacie</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" data-placement="bottom"
-                       href="#registration">Registracia</a>
+                       href="#registration" onclick="colapseSideNav()">Registracia</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" data-placement="bottom"
-                       href="#gallery">Galeria</a>
+                       href="#gallery" onclick="colapseSideNav()">Galeria</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" data-placement="bottom"
-                       href="#contact">Kontakt</a>
+                       href="#contact" onclick="colapseSideNav()">Kontakt</a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
                        href="https://www.facebook.com/Opál-Camp-146464582089712" target="_blank"
-                       data-original-title="Lajkni nas na Facebooku">
+                       data-original-title="Lajkni nas na Facebooku" onclick="colapseSideNav()">
                         <i class="fa fa-facebook-square"></i>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
                        href="https://www.instagram.com/OpalCamp" target="_blank"
-                       data-original-title="Followni nas na Instagrame">
+                       data-original-title="Followni nas na Instagrame" onclick="colapseSideNav()">
                         <i class="fa fa-instagram"></i>
                     </a>
                 </li>
@@ -771,7 +771,6 @@
 <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
 <script src="assets/js/material-kit.js?v=2.0.3" type="text/javascript"></script>
 <script src="assets/js/index.js" type="text/javascript"></script>
-
 
 </body>
 </html>
