@@ -11,4 +11,4 @@ This webpage is one of many portfolio page for me. It is for summer-camp where I
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/kubekbreha/OpalCamp/blob/master/LICENCE) file for details
