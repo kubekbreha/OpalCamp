@@ -10,37 +10,47 @@
 </head>
 <body>
 
-<ins class="pa-widget-gallery" style="width:100%; height:900px;"
-     data-url="https://goo.gl/photos/mgBgJHdgQExxhsbF9"
-     data-uid="efc708deb25cefe2ba6f31a0a8f6a48eb799950617414e658dd7ffef5f35cf29"
-     data-delay="5"
-></ins>
+
+<div id="test"></div>
+
 
 <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
-<!--  Firebase  -->
-<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
-<script>
-    var config = {
-        apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",
-        authDomain: "opal-1526306570324.firebaseapp.com",
-        databaseURL: "https://opal-1526306570324.firebaseio.com",
-        projectId: "opal-1526306570324",
-        storageBucket: "opal-1526306570324.appspot.com",
-        messagingSenderId: "809694766352"
-    };
-    firebase.initializeApp(config);
-</script>
-
-<script src="assets/js/material-photo-gallery/dist/js/material-photo-gallery.min.js"></script>
-<script>
-    var elem = document.querySelector('.m-p-g');
-
-    document.addEventListener('DOMContentLoaded', function() {
-        var gallery = new MaterialPhotoGallery(elem);
-    });
-</script>
 <script src="assets/js/gallery.js"></script>
 <script async src="https://www.publicalbum.org/js/pa-ins.min.js"></script>
+<script>
+    var urlAlbum = window.location.href;
+    var formatedAlbum = urlAlbum.split('#').pop();
+
+    if (!formatedAlbum.localeCompare('Pro_2017')) {
+        var div = document.createElement('div');
+        div.className = 'row';
+        div.innerHTML = '<ins class="pa-widget-gallery" style="width:100%; height:' + $(window).height() + 'px;"\n' +
+            '    data-url="https://goo.gl/photos/mgBgJHdgQExxhsbF9"\n' +
+            '    data-uid="efc708deb25cefe2ba6f31a0a8f6a48eb799950617414e658dd7ffef5f35cf29"\n' +
+            '    data-delay="5"\n' +
+            '        ></ins>';
+        document.getElementById('test').appendChild(div);
+    } else if (!formatedAlbum.localeCompare('Extrem_2017')) {
+        var div = document.createElement('div');
+        div.className = 'row';
+        div.innerHTML = '<ins class="pa-widget-gallery" style="width:100%; height:' + $(window).height() + 'px;"\n' +
+            '    data-url="https://photos.app.goo.gl/CqoxDJwYR1SsRDB73"\n' +
+            '    data-uid="efc708deb25cefe2ba6f31a0a8f6a48eb799950617414e658dd7ffef5f35cf29"\n' +
+            '    data-delay="5"\n' +
+            '        ></ins>';
+        document.getElementById('test').appendChild(div);
+    }else if (!formatedAlbum.localeCompare('Start_2017')) {
+        var div = document.createElement('div');
+        div.className = 'row';
+        div.innerHTML = '<ins class="pa-widget-gallery" style="width:100%; height:' + $(window).height() + 'px;"\n' +
+            '    data-url="https://goo.gl/photos/RHx9ppfwjwgu5wuTA"\n' +
+            '    data-uid="efc708deb25cefe2ba6f31a0a8f6a48eb799950617414e658dd7ffef5f35cf29"\n' +
+            '    data-delay="5"\n' +
+            '        ></ins>';
+        document.getElementById('test').appendChild(div);
+    }
+
+</script>
 
 </body>
 </html>
