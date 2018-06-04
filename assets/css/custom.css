@@ -1,21 +1,31 @@
 .facebook-responsive {
-    overflow:hidden;
-    padding-bottom:56.25%;
-    position:relative;
-    height:0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
 }
 
 .facebook-responsive iframe {
-    left:0;
-    top:0;
-    height:100%;
-    width:100%;
-    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
 }
-
 
 .about_us {
     overflow: hidden;
     white-space: nowrap;
 }
 
+@media only screen and (min-width: 1024px) {
+    #image_height {
+        height: 58em;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #image_height {
+        height: 40em;
+    }
+}
