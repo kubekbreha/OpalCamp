@@ -1,4 +1,4 @@
-# Project Title
+# OplaCamp
 
 ![Alt text](assets/img/github.png "Opal Camp")
 
