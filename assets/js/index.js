@@ -17,7 +17,6 @@ $('#registration_form').submit(function () {
     return false;
 });
 
-
 function sendRegisterDataToFirebase() {
 
     var inputAllRight = true;
@@ -126,14 +125,27 @@ function sendRegisterDataToFirebase() {
 function uploadNewRegistration(camp ,imageUrl) {
     var refAlbum = database.ref('registration/'+ camp);
     refAlbum.push(imageUrl).then(function onSuccess(res) {
-        console.log(res)
+        console.log(res);
         var div = document.createElement('div');
         div.innerHTML = getSuccessMessage();
         document.getElementById('formError').appendChild(div);
-        inputAllRight = false;
+        setInterval(closeAlert, 7000);
+        closeAlertErr();
     }).catch(function onError(err) {
-        console.log(err)
+        console.log(err);
+        var div = document.createElement('div');
+        div.innerHTML = getErrorMessage('Chyba databázy. Skúste nekôr prosím.');
+        document.getElementById('formError').appendChild(div);
     });
+}
+
+
+function closeAlert() {
+    $("#formAlert").click();
+}
+
+function closeAlertErr() {
+    $("#formAlertErr").click();
 }
 
 function getErrorMessage(error) {
@@ -141,7 +153,7 @@ function getErrorMessage(error) {
         '<div class="container">\n' +
         '<div class="alert-icon">\n' +
         '<i class="material-icons">error_outline</i></div>\n' +
-        '<button type="button" class="close" data-dismiss="alert"\n' +
+        '<button id="formAlertErr" type="button" class="close" data-dismiss="alert"\n' +
         'aria-label="Close">\n' +
         '<span aria-hidden="true"><i class="material-icons">clear</i></span>\n' +
         '</button>\n' +
@@ -157,7 +169,7 @@ function getSuccessMessage() {
         '<div class="alert-icon">\n' +
         '<i class="material-icons">check</i>\n' +
         '</div>\n' +
-        '<button type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
+        '<button id="formAlert" type="button" class="close" data-dismiss="alert" aria-label="Close">\n' +
         '<span aria-hidden="true"><i class="material-icons">clear</i></span>\n' +
         '</button>\n' +
         'Učastník úspešne registrovaný.\n' +
