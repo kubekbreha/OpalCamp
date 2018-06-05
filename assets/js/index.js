@@ -62,11 +62,18 @@ function sendRegisterDataToFirebase() {
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
-
+    var currentdate = new Date();
+    var datetime = currentdate.getDate() + "/"
+        + (currentdate.getMonth()+1)  + "/"
+        + currentdate.getFullYear() + " @ "
+        + currentdate.getHours() + ":"
+        + currentdate.getMinutes() + ":"
+        + currentdate.getSeconds();
 
     if(inputAllRight) {
         if (opalStart === true) {
             var myJson = {
+                registerTime: { datetime },
                 kidName: {kidName},
                 kidBorn: {kidBorn},
                 kidPhone: {kidPhone},
@@ -84,6 +91,7 @@ function sendRegisterDataToFirebase() {
 
         }else{
             var myJson = {
+                registerTime: { datetime },
                 kidName: {kidName},
                 kidBorn: {kidBorn},
                 kidPhone: {kidPhone},

@@ -13,6 +13,16 @@
     position: absolute;
 }
 
+.fb-page,
+.fb-page span,
+.fb-page span iframe[style] {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 70%;
+    position: absolute;
+}
+
 .about_us {
     overflow: hidden;
     white-space: nowrap;

@@ -24,6 +24,18 @@
 </head>
 
 <body class="profile-page sidebar-collapse">
+
+<div id="fb-root"></div>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/sk_SK/sdk.js#xfbml=1&version=v3.0';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
 <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
      id="sectionsNav">
     <div class="container">
@@ -187,6 +199,29 @@
         </div>
     </div>
 
+    <div class="section text-center" style="background-color: #4C4C4D;">
+        <div class="container">
+            <div class="row ">
+
+                <div class="col-md-12 ml-auto mr-auto text-center">
+                    <h1 class="title text-white">Nástenka</h1>
+
+                    <div class="fb-page"
+                         data-href="https://www.facebook.com/Op%C3%A1l-Camp-146464582089712/"
+                         data-tabs="timeline" data-width="500" data-small-header="true"
+                         data-adapt-container-width="true"
+                         data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/Op%C3%A1l-Camp-146464582089712/"
+                                    class="fb-xfbml-parse-ignore"><a
+                                href="https://www.facebook.com/Op%C3%A1l-Camp-146464582089712/">Opál Camp</a>
+                        </blockquote>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
     <div class="section text-center" style="background-color: #FFFFFF;">
         <div class="container">
@@ -285,6 +320,7 @@
     <div class="section text-center text-white" style="background-color: #4C4C4D;">
         <div class="container">
             <div class="row ">
+
 
                 <div class="col-md-12 ml-auto mr-auto text-center">
                     <h2 class="title text-white">Život na campe</h2>
@@ -656,11 +692,7 @@
                                         </div>
                                     </div>
 
-                                    <div id="formError">
-
-
-                                    </div>
-
+                                    <div id="formError"></div>
 
                                 </div>
                             </div>
@@ -771,16 +803,16 @@
 <!--  Firebase  -->
 <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script>
-// Initialize Firebase
-var config = {
-apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",
-authDomain: "opal-1526306570324.firebaseapp.com",
-databaseURL: "https://opal-1526306570324.firebaseio.com",
-projectId: "opal-1526306570324",
-storageBucket: "opal-1526306570324.appspot.com",
-messagingSenderId: "809694766352"
-};
-firebase.initializeApp(config);
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",
+        authDomain: "opal-1526306570324.firebaseapp.com",
+        databaseURL: "https://opal-1526306570324.firebaseio.com",
+        projectId: "opal-1526306570324",
+        storageBucket: "opal-1526306570324.appspot.com",
+        messagingSenderId: "809694766352"
+    };
+    firebase.initializeApp(config);
 </script>
 
 <!--   Core JS Files   -->
