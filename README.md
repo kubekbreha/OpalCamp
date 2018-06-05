@@ -1,4 +1,4 @@
-# OplaCamp
+# Opal Camp
 
 ![Alt text](assets/img/github.png "Opal Camp")
 
