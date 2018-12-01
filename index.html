@@ -471,7 +471,7 @@
 
 
         <!--Registracia-->
-         <!--<div id="registration" class="section section-signup page-header"
+          <div id="registration" class="section section-signup page-header"
          style="height: 130%; background-color: #FBB24B;">
         <div class="container">
 
@@ -485,60 +485,18 @@
                             <div class="card-body ">
                                 <div class="container">
 
+                                    <div class="col-md-12  ml-auto mr-auto">
+                                        <div class="text-center">
+                                            <h4 class="title" style="color: #000;">Osobné údaje.</h4>
+                                        </div>
+                                    </div>
 
                                     <div class="row">
                                         <div class="col-md-12  ml-auto mr-auto">
-                                            <div class="text-center">
-                                                <h4 class="title" style="color: #000;">Vyberte si termím táboru</h4>
-                                            </div>
-                                        </div>
-
-
-                                        Checkboxs
-                                        <div class="col-md-6  ml-auto mr-auto">
-                                            <div class="form-check has-warning">
-                                                <label class="form-check-label">
-                                                    <label style="color: #FBB24B;" for="opalStart"
-                                                           class="bmd-label-floating">*</label>
-                                                    <input id="opalStart" class="form-check-input " type="checkbox"
-                                                           value="">
-                                                    Opál Camp ŠTART (15.-21. júl 2018) (10-13 rokov)
-                                                    <span class="form-check-sign">
-                                                      <span class="check"></span>
-                                                  </span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6  ml-auto mr-auto">
-                                            <div class="form-check ">
-                                                <label class="form-check-label">
-                                                    <label style="color: #FBB24B;" for="opalPro"
-                                                           class="bmd-label-floating">*</label>
-                                                    <input id="opalPro" class="form-check-input" type="checkbox"
-                                                           value="">
-                                                    Opál Camp PRO (8.-14. júl 2018) (14-18 rokov)
-                                                    <span class="form-check-sign">
-                                                              <span class="check"></span>
-                                                          </span>
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    First row
-                                    <div class="text-center">
-                                        <h4 class="title" style="color: #000;">Osobné údaje</h4>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-6  ml-auto mr-auto">
                                             <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
                                                       <span class="input-group-text">
-                                                          <i class="material-icons">face</i>
+                                                          <i class="material-icons">account_circle</i>
                                                       </span>
                                                 </div>
                                                 <label style="color: #FBB24B;" for="kidName" class="bmd-label-floating">*</label>
@@ -547,8 +505,9 @@
 
                                             </div>
                                         </div>
+                                    </div>
 
-
+                                    <div class="row">
                                         <div class="col-md-6 ml-auto mr-auto">
                                             <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
@@ -561,10 +520,8 @@
                                                        placeholder="Datum nerodienia...">
                                             </div>
                                         </div>
-                                    </div>
 
-                                    Second row
-                                    <div class="row">
+                                    <!-- Second row -->
                                         <div class="col-md-6 ml-auto mr-auto">
                                             <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
@@ -572,14 +529,15 @@
                                                         <i class="material-icons">phone</i>
                                                     </span>
                                                 </div>
-                                                <label style="color: #FBB24B;" for="kidPhone"
-                                                       class="bmd-label-floating">*</label>
+
                                                 <input id="kidPhone" type="tel" class="form-control"
                                                        placeholder="Telefónne číslo...">
                                             </div>
                                         </div>
+                                    </div>
 
 
+                                    <div class="row">
                                         <div class="col-md-6 ml-auto mr-auto">
                                             <div class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
@@ -592,136 +550,76 @@
                                                        placeholder="Email...">
                                             </div>
                                         </div>
-                                    </div>
 
-
-                                    Third row
-                                    <div class="text-center">
-                                        <h4 class="title" style="color: #000;">Adresa</h4>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-4 ml-auto mr-auto">
+                                        <div class="col-md-6 ml-auto mr-auto">
                                             <div class="form-group input-group has-warning">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">home</i>
-                                                    </span>
-                                                </div>
-                                                <label style="color: #FBB24B;" for="kidAddress"
-                                                       class="bmd-label-floating">*</label>
-                                                <input id="kidAddress" type="text" class="form-control"
-                                                       placeholder="Ulica a číslo domu ...">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="form-group input-group has-warning">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">location_city</i>
-                                                    </span>
-                                                </div>
-                                                <label style="color: #FBB24B;" for="kidCity" class="bmd-label-floating">*</label>
-                                                <input id="kidCity" type="text" class="form-control"
-                                                       placeholder="PSČ a mesto ...">
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="form-group input-group has-warning">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">school</i>
-                                                    </span>
-                                                </div>
-                                                <input id="kidSchool" type="text" class="form-control"
-                                                       placeholder="Škola, trieda...">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    Fourth row
-                                    <div class="text-center">
-                                        <h4 class="title" style="color: #000;">Dalsie informácie</h4>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12 ml-auto mr-auto">
-                                            <div class="orm-group input-group has-warning">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">local_hospital</i>
-                                                    </span>
-                                                </div>
-                                                <input id="kidHealth" type="text" class="form-control"
-                                                       placeholder="Zdravotný stav, alergia, prekonané ochorenie, obmedzenia, stravovanie...">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-12 ml-auto mr-auto">
-                                            <div class="orm-group input-group has-warning">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">add</i>
-                                                    </span>
-                                                </div>
-                                                <input id="kidNote" type="text" class="form-control"
-                                                       placeholder="Poznámka pre usporiadateľa...">
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    Fifth row
-                                    <div class="text-center">
-                                        <h4 class="title" style="color: #000;">Kontakt na rodiča</h4>
-                                    </div>
-
-                                    <div class="row">
-                                        <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="form-group input-group has-warning">
-                                                <div class="input-group-prepend">
+                                                <div class="form-group">
                                                     <span class="input-group-text">
                                                         <i class="material-icons">face</i>
                                                     </span>
-                                                </div>
-                                                <label style="color: #FBB24B;" for="parentName"
-                                                       class="bmd-label-floating">*</label>
-                                                <input id="parentName" type="text" class="form-control"
-                                                       placeholder="Meno a prezdvisko...">
-                                            </div>
-                                        </div>
+                                                    <label for="exampleFormControlSelect1">Example select</label>
+                                                       <select class="form-control selectpicker" data-style="btn btn-link" id="exampleFormControlSelect1">
+                                                         <option>1</option>
+                                                         <option>2</option>
+                                                         <option>3</option>
+                                                         <option>4</option>
+                                                         <option>5</option>
+                                                       </select>
 
-                                        <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="form-group input-group has-warning">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">phone</i>
-                                                    </span>
-                                                </div>
-                                                <label style="color: #FBB24B;" for="parentPhone"
-                                                       class="bmd-label-floating">*</label>
-                                                <input id="parentPhone" type="tel" class="form-control"
-                                                       placeholder="Telefónne číslo...">
-                                            </div>
-                                        </div>
+                                                  </div>
 
-                                        <div class="col-md-4 ml-auto mr-auto">
-                                            <div class="form-group input-group has-warning">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">
-                                                        <i class="material-icons">email</i>
-                                                    </span>
-                                                </div>
-                                                <input id="parentMail" type="email" class="form-control"
-                                                       placeholder="Email...">
                                             </div>
                                         </div>
                                     </div>
 
-                                    Sixth row
+
+
+                                    <div class="row">
+                                        <div class="col-md-12  ml-auto mr-auto">
+                                            <div class="text-center">
+                                                <h4 class="title" style="color: #000;">Ak máš tim, môžeš ho zaregistrovať.</h4>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12 ml-auto mr-auto">
+                                            <div class="form-group input-group has-warning">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="material-icons">people</i>
+                                                    </span>
+                                                </div>
+                                                <input id="kidTeam" type="gender" class="form-control"
+                                                       placeholder="Nazov timu...">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
+                                        <div class="col-md-12  ml-auto mr-auto">
+                                            <div class="form-check has-warning">
+                                                <label class="form-check-label">
+                                                    <label style="color: #FBB24B;" for="privacy"
+                                                           class="bmd-label-floating">*</label>
+                                                    <input id="privacy" class="form-check-input " type="checkbox"
+                                                           value="">
+                                                    Uzavretím registrácie účastník súhlasí so spracovaním osobných údajov, uverejňovaním fotografií s jeho podobizňou a zasielaním informačných mailov ohľadom podujatia.
+                                                    <span class="form-check-sign">
+                                                      <span class="check"></span>
+                                                  </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
+                                        <div class="col-md-6 ml-auto mr-auto text-center">
+                                            <a>Polia označené </a>
+                                            <a style="color: #FBB24B;">* </a>
+                                            <a>je potrebné vyplniť.</a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sixth row -->
                                     <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
                                         <div class="col-md-6 ml-auto mr-auto text-center">
                                             <button style="width: 100%; height: 100%;"
@@ -740,7 +638,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
         <!--Galeria -->
@@ -832,8 +730,8 @@
     </footer>
 
 
-    <!--  Firebase  -->
-    <!-- <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+     <!-- Firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
@@ -845,7 +743,7 @@
             messagingSenderId: "809694766352"
         };
         firebase.initializeApp(config);
-    </script> -->
+    </script>
 
     <!--   Core JS Files   -->
     <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
@@ -858,7 +756,7 @@
     <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
     <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
     <script src="assets/js/material-kit.js?v=2.0.3" type="text/javascript"></script>
-    <!-- <script src="assets/js/index.js" type="text/javascript"></script> -->
+    <script src="assets/js/index.js" type="text/javascript"></script>
 
 </body>
 

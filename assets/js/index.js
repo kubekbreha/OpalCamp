@@ -1,4 +1,3 @@
-
 var database = firebase.database();
 
 function topFunction() {
@@ -12,7 +11,7 @@ function colapseSideNav() {
 }
 
 
-$('#registration_form').submit(function () {
+$('#registration_form').submit(function() {
     sendRegisterDataToFirebase();
     return false;
 });
@@ -21,117 +20,77 @@ function sendRegisterDataToFirebase() {
 
     var inputAllRight = true;
 
-    var opalStart = $('#opalStart').is(":checked");
-    var opalPro = $('#opalPro').is(":checked");
-
     var kidName = document.getElementById("kidName").value;
     var kidBorn = document.getElementById("kidBorn").value;
     var kidPhone = document.getElementById("kidPhone").value;
     var kidMail = document.getElementById("kidMail").value;
+    var kidGender = document.getElementById("kidGender").value;
+    var kidTeam = document.getElementById("kidTeam").value;
 
-    var kidAddress = document.getElementById("kidAddress").value;
-    var kidCity = document.getElementById("kidCity").value;
-    var kidSchool = document.getElementById("kidSchool").value;
+    var permisions = $('#privacy').is(":checked");
 
-    var kidHealth = document.getElementById("kidHealth").value;
-    var kidNote = document.getElementById("kidNote").value;
-
-    var parentName = document.getElementById("parentName").value;
-    var parentPhone = document.getElementById("parentPhone").value;
-    var parentMail = document.getElementById("parentMail").value;
-
-
-    if (kidName === "" || kidBorn === "" || kidPhone === "" || kidMail === "" || kidAddress === "" || kidCity === "" ||
-        parentName === "" || parentPhone === "") {
+    if (permisions == false) {
         var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyplnte všetky potrebné polia');
+        div.innerHTML = getErrorMessage('Podtvrďte spracovanie osobných údajov prosím !');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
-    if (opalStart === false && opalPro === false) {
+    if (kidName === "" || kidBorn === "" || kidMail === "" || kidGender === "") {
         var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyberte tábor ktorého sa chcete zúčastniť');
+        div.innerHTML = getErrorMessage('Prosím vyplnte všetky potrebné polia.');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
-    if (opalStart === true && opalPro === true) {
-        var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyberte iba jeden tábor ktorého sa chcete zúčastniť');
-        document.getElementById('formError').appendChild(div);
-        inputAllRight = false;
-    }
     var currentdate = new Date();
-    var datetime = currentdate.getDate() + "/"
-        + (currentdate.getMonth()+1)  + "/"
-        + currentdate.getFullYear() + " @ "
-        + currentdate.getHours() + ":"
-        + currentdate.getMinutes() + ":"
-        + currentdate.getSeconds();
+    var datetime = currentdate.getDate() + "/" +
+        (currentdate.getMonth() + 1) + "/" +
+        currentdate.getFullYear() + " @ " +
+        currentdate.getHours() + ":" +
+        currentdate.getMinutes() + ":" +
+        currentdate.getSeconds();
 
-    if(inputAllRight) {
-        if (opalStart === true) {
-            var myJson = {
-                registerTime: { datetime },
-                kidName: {kidName},
-                kidBorn: {kidBorn},
-                kidPhone: {kidPhone},
-                kidMail: {kidMail},
-                kidAddress: {kidAddress},
-                kidCity: {kidCity},
-                kidSchool: {kidSchool},
-                kidHealth: {kidHealth},
-                kidNote: {kidNote},
-                parentName: {parentName},
-                parentPhone: {parentPhone},
-                parentMail: {parentMail}
-            };
-            uploadNewRegistration('start', myJson);
-
-        }else{
-            var myJson = {
-                registerTime: { datetime },
-                kidName: {kidName},
-                kidBorn: {kidBorn},
-                kidPhone: {kidPhone},
-                kidMail: {kidMail},
-                kidAddress: {kidAddress},
-                kidCity: {kidCity},
-                kidSchool: {kidSchool},
-                kidHealth: {kidHealth},
-                kidNote: {kidNote},
-                parentName: {parentName},
-                parentPhone: {parentPhone},
-                parentMail: {parentMail}
-            };
-            uploadNewRegistration('pro', myJson);
-        }
-
-        $("#opalStart").prop("checked", false);
-        $("#opalPro").prop("checked", false);
-        document.getElementById("kidName").value = "";
-        document.getElementById("kidBorn").value = "";
-        document.getElementById("kidPhone").value = "";
-        document.getElementById("kidMail").value = "";
-
-        document.getElementById("kidAddress").value = "";
-        document.getElementById("kidCity").value = "";
-        document.getElementById("kidSchool").value = "";
-
-        document.getElementById("kidHealth").value = "";
-        document.getElementById("kidNote").value = "";
-
-        document.getElementById("parentName").value = "";
-        document.getElementById("parentPhone").value = "";
-        document.getElementById("parentMail").value = "";
-
+    if (inputAllRight) {
+        var myJson = {
+            registerTime: {
+                datetime
+            },
+            kidName: {
+                kidName
+            },
+            kidBorn: {
+                kidBorn
+            },
+            kidPhone: {
+                kidPhone
+            },
+            kidMail: {
+                kidMail
+            },
+            kidGender: {
+                kidGender
+            },
+            kidTeam: {
+                kidTeam
+            }
+        };
+        uploadNewRegistration('tripDay', myJson);
     }
+
+    document.getElementById("kidName").value = "";
+    document.getElementById("kidBorn").value = "";
+    document.getElementById("kidPhone").value = "";
+    document.getElementById("kidMail").value = "";
+    document.getElementById("kidGender").value = "";
+    document.getElementById("kidTeam").value = "";
+    $("#privacy").prop("checked", false);
+
 }
 
 
-function uploadNewRegistration(camp ,imageUrl) {
-    var refAlbum = database.ref('registration/'+ camp);
+function uploadNewRegistration(camp, imageUrl) {
+    var refAlbum = database.ref('registration/' + camp);
     refAlbum.push(imageUrl).then(function onSuccess(res) {
         console.log(res);
         var div = document.createElement('div');
@@ -165,7 +124,7 @@ function getErrorMessage(error) {
         'aria-label="Close">\n' +
         '<span aria-hidden="true"><i class="material-icons">clear</i></span>\n' +
         '</button>\n' +
-        '<b>Chyba:</b>\t  ' + error + ' .\n' +
+        '<b>Chyba:</b>\t  ' + error + ' \n' +
         '</div>\n' +
         '</div>';
 }
