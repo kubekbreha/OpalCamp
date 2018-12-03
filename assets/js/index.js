@@ -77,7 +77,7 @@ function sendRegisterDataToFirebase() {
         };
 
         console.log(myJson);
-        // uploadNewRegistration('tripDay', myJson);
+        uploadNewRegistration('tripDay', myJson);
     }
 
     document.getElementById("kidName").value = "";
