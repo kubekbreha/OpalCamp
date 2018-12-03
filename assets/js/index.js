@@ -78,15 +78,17 @@ function sendRegisterDataToFirebase() {
 
         console.log(myJson);
         uploadNewRegistration('tripDay', myJson);
+
+        document.getElementById("kidName").value = "";
+        document.getElementById("kidBorn").value = "";
+        document.getElementById("kidPhone").value = "";
+        document.getElementById("kidMail").value = "";
+        document.getElementById("kidGender").value = "";
+        document.getElementById("kidTeam").value = "";
+        $("#privacy").prop("checked", false);
     }
 
-    document.getElementById("kidName").value = "";
-    document.getElementById("kidBorn").value = "";
-    document.getElementById("kidPhone").value = "";
-    document.getElementById("kidMail").value = "";
-    document.getElementById("kidGender").value = "";
-    document.getElementById("kidTeam").value = "";
-    $("#privacy").prop("checked", false);
+
 
 }
 
