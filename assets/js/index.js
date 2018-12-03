@@ -75,7 +75,9 @@ function sendRegisterDataToFirebase() {
                 kidTeam
             }
         };
-        uploadNewRegistration('tripDay', myJson);
+
+        console.log(myJson);
+        // uploadNewRegistration('tripDay', myJson);
     }
 
     document.getElementById("kidName").value = "";
