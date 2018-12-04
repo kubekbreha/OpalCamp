@@ -78,18 +78,7 @@ function sendRegisterDataToFirebase() {
 
         console.log(myJson);
         uploadNewRegistration('tripDay', myJson);
-
-        document.getElementById("kidName").value = "";
-        document.getElementById("kidBorn").value = "";
-        document.getElementById("kidPhone").value = "";
-        document.getElementById("kidMail").value = "";
-        document.getElementById("kidGender").value = "";
-        document.getElementById("kidTeam").value = "";
-        $("#privacy").prop("checked", false);
     }
-
-
-
 }
 
 
@@ -102,6 +91,15 @@ function uploadNewRegistration(camp, imageUrl) {
         document.getElementById('formError').appendChild(div);
         setInterval(closeAlert, 7000);
         closeAlertErr();
+
+        document.getElementById("kidName").value = "";
+        document.getElementById("kidBorn").value = "";
+        document.getElementById("kidPhone").value = "";
+        document.getElementById("kidMail").value = "";
+        document.getElementById("kidGender").value = "";
+        document.getElementById("kidTeam").value = "";
+        $("#privacy").prop("checked", false);
+
     }).catch(function onError(err) {
         console.log(err);
         var div = document.createElement('div');
