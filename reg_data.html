@@ -32,7 +32,7 @@
             snapshot.forEach(function(childSnapshot) {
                 var childData = childSnapshot.val();
                 console.log(childData);
-                d1.insertAdjacentHTML('beforeend', '<p>' + JSON.stringify(childData.kidMail.kidMail) + '</p>');
+                d1.insertAdjacentHTML('beforeend', '<p>' + JSON.stringify(childData.kidName.kidName) + '</p>');
             });
         });
     </script>
