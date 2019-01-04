@@ -27,7 +27,7 @@
         var database = firebase.database();
 
         var d1 = document.getElementById('table');
-        var leadsRef = database.ref('registration/tripDay');
+        var leadsRef = database.ref('registration/ocCool2019');
         leadsRef.on('value', function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
                 var childData = childSnapshot.val();

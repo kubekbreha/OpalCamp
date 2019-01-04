@@ -23,9 +23,8 @@ function sendRegisterDataToFirebase() {
     var kidName = document.getElementById("kidName").value;
     var kidBorn = document.getElementById("kidBorn").value;
     var kidPhone = document.getElementById("kidPhone").value;
+    var parentPhone = document.getElementById("parentPhone").value;
     var kidMail = document.getElementById("kidMail").value;
-    var kidGender = document.getElementById("kidGender").value;
-    var kidTeam = document.getElementById("kidTeam").value;
 
     var permisions = $('#privacy').is(":checked");
 
@@ -36,7 +35,7 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if (kidName === "" || kidBorn === "" || kidMail === "" || kidGender === "") {
+    if (kidName === "" || kidBorn === "" || kidMail === "" || kidPhone === "" || parentPhone === "") {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyplnte všetky potrebné polia.');
         document.getElementById('formError').appendChild(div);
@@ -65,19 +64,16 @@ function sendRegisterDataToFirebase() {
             kidPhone: {
                 kidPhone
             },
+            parentPhone: {
+                parentPhone
+            },
             kidMail: {
                 kidMail
-            },
-            kidGender: {
-                kidGender
-            },
-            kidTeam: {
-                kidTeam
             }
         };
 
         console.log(myJson);
-        uploadNewRegistration('tripDay', myJson);
+        uploadNewRegistration('ocCool2019', myJson);
     }
 }
 
@@ -95,9 +91,8 @@ function uploadNewRegistration(camp, imageUrl) {
         document.getElementById("kidName").value = "";
         document.getElementById("kidBorn").value = "";
         document.getElementById("kidPhone").value = "";
+        document.getElementById("parentPhone").value = "";
         document.getElementById("kidMail").value = "";
-        document.getElementById("kidGender").value = "";
-        document.getElementById("kidTeam").value = "";
         $("#privacy").prop("checked", false);
 
     }).catch(function onError(err) {

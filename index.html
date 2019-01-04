@@ -62,12 +62,16 @@
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="#oc_2019" onclick="colapseSideNav()">2019</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" data-placement="bottom" href="#oc_siet" onclick="colapseSideNav()">Sieť</a>
                     </li>
 
-                    <!-- <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" data-placement="bottom" href="#registration" onclick="colapseSideNav()">Registrácia</a>
-                    </li> -->
+                    </li>
 
 
                     <!-- <li class="nav-item">
@@ -191,7 +195,31 @@
             </div>
 
 
-            <!-- `SIET -->
+
+            <!-- TERMINY OC 2019 -->
+            <div id="oc_2019" class="section text-center" style="background-color: #4C4C4D;">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12 ml-auto mr-auto">
+                            <h1 class="title text-white">TERMÍNY OPÁL CAMPOV 2019</h1>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="title text-white">1.-3. február OC cool (10-13 rokov)</h4>
+                            <h4 class="title text-white">3.-7. júl OC pre rodiny</h4>
+                            <h4 class="title text-white">8.-12. júl OC denný pre lokálne deti (6 -10 rokov)</h4>
+                            <h4 class="title text-white">13.-20. júl OC PRO (14-18 rokov)</h4>
+                            <h4 class="title text-white">21.-27. júl OC ŠTART (10-13 rokov)</h4>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- SIET -->
             <div id="oc_siet" class="section text-center" style="background-color: #FFFFFF;">
                 <div class="container">
 
@@ -476,25 +504,24 @@
 
 
         <!--Registracia-->
-          <!-- <div id="registration" class="section section-signup page-header"
+          <div id="registration" class="section section-signup page-header"
          style="height: 130%; background-color: #FBB24B;">
         <div class="container">
 
             <div class="row">
                 <div class="col-md-12 ml-auto mr-auto text-center">
-                    <h2 class="title">Registrácia na Catch Me</h2>
+                    <h2 class="title">Registrácia na OC Cool 2019</h2>
                 </div>
+
+                <div class="col-md-12 ml-auto mr-auto text-center">
+                    <h4 >OC COOL je zimný pobyt pre mladých od 10 do 13 rokov. Cena víkendu je 15€. Ubytovanie je v priestoroch ubytovne Zboru Cirkvi bratskej. Začiatok je v piatok 1.2. o 15:00 a koniec je v nedeľu 3.2. o 14:00.</h4>
+                </div>
+
                 <div class="col-md-12 ml-auto mr-auto">
                     <div class="card card-signup">
                         <form id="registration_form" class="form">
                             <div class="card-body ">
                                 <div class="container">
-
-                                    <div class="col-md-12  ml-auto mr-auto">
-                                        <div class="text-center">
-                                            <h4 class="title" style="color: #000;">Osobné údaje.</h4>
-                                        </div>
-                                    </div>
 
                                     <div class="row">
                                         <div class="col-md-12  ml-auto mr-auto">
@@ -531,6 +558,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text">
                                                         <i class="material-icons">phone</i>
+                                                        <a style="color: #FBB24B; margin-top: 0.3rem;"> *</a>
                                                     </span>
                                                 </div>
 
@@ -559,41 +587,18 @@
                                         <div  class="col-md-6 ml-auto mr-auto">
                                             <div  class="form-group input-group has-warning">
                                                 <div class="input-group-prepend">
-                                                    <span class="input-group-text" >
-                                                        <i style="margin-top: 1.5rem;" class="material-icons">face</i>
-                                                        <a style="color: #FBB24B; margin-top:1.7rem;"> *</a>
-                                                    </span>
-                                                </div>
-                                                <select style="margin-top: 1.3rem;"  class="form-control selectpicker" id="kidGender">
-                                                  <option>Chlapec</option>
-                                                  <option>Dievča</option>
-                                                </select>
-
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <div class="row">
-                                        <div class="col-md-12  ml-auto mr-auto">
-                                            <div class="text-center">
-                                                <h4 class="title" style="color: #000;">Ak máš tím, môžeš ho zaregistrovať.</h4>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-12 ml-auto mr-auto">
-                                            <div class="form-group input-group has-warning">
-                                                <div class="input-group-prepend">
                                                     <span class="input-group-text">
-                                                        <i class="material-icons">people</i>
+                                                        <i class="material-icons">phone</i>
+                                                        <a style="color: #FBB24B; margin-top: 0.3rem;"> *</a>
                                                     </span>
                                                 </div>
-                                                <input id="kidTeam" type="gender" class="form-control"
-                                                       placeholder="Nazov timu...">
+
+                                                <input id="parentPhone" type="tel" class="form-control"
+                                                       placeholder="Telefónne číslo rodiča...">
                                             </div>
                                         </div>
                                     </div>
+
 
                                     <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
                                         <div class="col-md-12  ml-auto mr-auto">
@@ -612,11 +617,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
-                                        <div class="col-md-6 ml-auto mr-auto text-center">
-                                            <a>Štartovné je dobrovoľné</a>
-                                        </div>
-                                    </div>
+
 
                                     <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
                                         <div class="col-md-6 ml-auto mr-auto text-center">
@@ -635,7 +636,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
 
         <!--Galeria -->
