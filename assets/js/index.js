@@ -45,6 +45,14 @@ function sendRegisterDataToFirebase() {
     var L = $('#L').is(":checked");
     var XL = $('#XL').is(":checked");
 
+    var permisions = $('#privacy').is(":checked");
+
+    if (permisions == false) {
+        var div = document.createElement('div');
+        div.innerHTML = getErrorMessage('Podtvrďte spracovanie osobných údajov prosím !');
+        document.getElementById('formError').appendChild(div);
+        inputAllRight = false;
+    }
 
     if (kidName === "" || kidBorn === "" || kidPhone === "" || kidMail === "" || kidAddress === "" || kidCity === "" ||
     kidSchool === "" || parentName === "" || parentPhone === "" || parentMail === "") {
@@ -172,6 +180,8 @@ function sendRegisterDataToFirebase() {
         $("#M").prop("checked", false);
         $("#L").prop("checked", false);
         $("#XL").prop("checked", false);
+
+        $("#privacy").prop("checked", false);
     }
 }
 
