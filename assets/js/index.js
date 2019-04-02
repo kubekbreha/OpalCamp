@@ -15,7 +15,6 @@ $('#registration_form').submit(function () {
 });
 
 function sendRegisterDataToFirebase() {
-
     var inputAllRight = true;
 
     var opalStart = $('#opalStart').is(":checked");
@@ -44,40 +43,47 @@ function sendRegisterDataToFirebase() {
     var M = $('#M').is(":checked");
     var L = $('#L').is(":checked");
     var XL = $('#XL').is(":checked");
-
+    
     var permisions = $('#privacy').is(":checked");
 
     if (permisions == false) {
         var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Podtvrďte spracovanie osobných údajov prosím !');
+        div.innerHTML = getErrorMessage('Podtvrďte spracovanie osobných údajov prosím');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
-    if (kidName === "" || kidBorn === "" || kidPhone === "" || kidMail === "" || kidAddress === "" || kidCity === "" ||
-    kidSchool === "" || parentName === "" || parentPhone === "" || parentMail === "") {
+    if (kidName === "" || kidBorn === "" || kidPhone === "" || kidMail === "" || kidAddress === "" || kidCity === "") {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyplnte všetky potrebné polia');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
+    if( (parentName === "" || parentPhone === "" || parentMail === "") && (opalStart || opalLocal || opalPro)){
+        var div = document.createElement('div');
+        div.innerHTML = getErrorMessage('Prosím vyplnte kontakt na rodiča');
+        document.getElementById('formError').appendChild(div);
+        inputAllRight = false;
+    }
+
     if (S == false && M == false && L == false && XL== false) {
         var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyberte si velkost tricka');
+        div.innerHTML = getErrorMessage('Prosím vyberte si veľkost trička');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
     var tShirtPicked = 0;
-    if(S === true) tShirtPicked++;
-    if(M === true) tShirtPicked++;
-    if(L === true) tShirtPicked++;
-    if(XL === true) tShirtPicked++;
+  
+    if(S == true) tShirtPicked++;
+    if(M == true) tShirtPicked++;
+    if(L == true) tShirtPicked++;
+    if(XL == true) tShirtPicked++;
 
     if (tShirtPicked > 1) {
         var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyberte si len jednu velkost tricka.');
+        div.innerHTML = getErrorMessage('Prosím vyberte si len jednu veľkosť trička');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
@@ -98,18 +104,10 @@ function sendRegisterDataToFirebase() {
 
     if (campsPicked > 1) {
         var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyberte si len jeden tábor do ktorého sa chcete registrovať. Pre registrovanie do dvoch táborov použite registračný formulár znova.');
+        div.innerHTML = getErrorMessage('Prosím vyberte si len jeden tábor do ktorého sa chcete registrovať. Pre registrovanie do dvoch táborov použite registračný formulár znova');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
-
-    if (opalStart === false && opalPro === false && opalExtrem === false && opalLocal === false && opalFamily === false) {
-        var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyberte tábor ktorého sa chcete zúčastniť');
-        document.getElementById('formError').appendChild(div);
-        inputAllRight = false;
-    }
-
 
     var currentdate = new Date();
     var datetime = currentdate.getDate() + "/"
@@ -240,3 +238,4 @@ function getSuccessMessage() {
         '</div>\n' +
         '</div>';
 }
+

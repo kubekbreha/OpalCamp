@@ -589,7 +589,7 @@
                                                         <label style="color: #FBB24B;" for="opalExtrem"
                                                             class="bmd-label-floating">*</label>
                                                         <input id="opalExtrem" class="form-check-input" type="checkbox"
-                                                            value="">
+                                                            value="" />
                                                         26.-29.august OC EXTRÉM (18+) Cena tábora: 75€
                                                         <span class="form-check-sign">
                                                             <span class="check"></span>
@@ -726,7 +726,7 @@
                                                             <i class="material-icons">school</i>
                                                         </span>
                                                     </div>
-                                                   
+
                                                     <input id="kidSchool" type="text" class="form-control"
                                                         placeholder="Skončený školský ročník">
                                                 </div>
@@ -765,6 +765,7 @@
                                         <!-- Fifth row -->
                                         <div class="text-center">
                                             <h4 class="title" style="color: #000;">Kontakt na rodiča</h4>
+                                            <h6 class="title"  style="color: #000;">Vyplniť v prípade neplnoletosti učastníka.</h6>
                                         </div>
                                         <div class="row">
                                             <div class="col-md-4 ml-auto mr-auto">
@@ -843,8 +844,8 @@
                                             <div class="col-md-3  ml-auto mr-auto">
                                                 <div class="form-check has-warning">
                                                     <label class="form-check-label">
-                                                        <input id="opalStart" class="form-check-input " type="checkbox"
-                                                            value="L">
+                                                        <input id="L" class="form-check-input " type="checkbox"
+                                                            value="">
                                                         L
                                                         <span class="form-check-sign">
                                                             <span class="check"></span>
@@ -855,8 +856,8 @@
                                             <div class="col-md-3 ml-auto mr-auto">
                                                 <div class="form-check has-warning">
                                                     <label class="form-check-label">
-                                                        <input id="opalStart" class="form-check-input " type="checkbox"
-                                                            value="XL">
+                                                        <input id="XL" class="form-check-input " type="checkbox"
+                                                            value="">
                                                         XL
                                                         <span class="form-check-sign">
                                                             <span class="check"></span>
@@ -867,22 +868,24 @@
                                         </div>
 
                                         <div class="row" style="margin-top: 3em; margin-bottom: 3em;">
-                                                <div class="col-md-12  ml-auto mr-auto">
-                                                    <div class="form-check has-warning">
-                                                        <label class="form-check-label">
-                                                            <label style="color: #FBB24B;" for="privacy"
-                                                                   class="bmd-label-floating"> *</label>
-                                                            <input id="privacy" class="form-check-input " type="checkbox"
-                                                                   value="">
-                                                            Uzavretím registrácie účastník súhlasí so spracovaním osobných údajov, uverejňovaním fotografií s jeho podobizňou a zasielaním informačných mailov ohľadom podujatia.
-                                                            <span class="form-check-sign">
-                                                              <span class="check"></span>
-                                                          </span>
-                                                        </label>
-                                                    </div>
+                                            <div class="col-md-12  ml-auto mr-auto">
+                                                <div class="form-check has-warning">
+                                                    <label class="form-check-label">
+                                                        <label style="color: #FBB24B;" for="privacy"
+                                                            class="bmd-label-floating"> *</label>
+                                                        <input id="privacy" class="form-check-input " type="checkbox"
+                                                            value="">
+                                                        Uzavretím registrácie účastník súhlasí so spracovaním osobných
+                                                        údajov, uverejňovaním fotografií s jeho podobizňou a zasielaním
+                                                        informačných mailov ohľadom podujatia.
+                                                        <span class="form-check-sign">
+                                                            <span class="check"></span>
+                                                        </span>
+                                                    </label>
                                                 </div>
                                             </div>
-        
+                                        </div>
+
 
 
                                         <!-- Sixth row -->
@@ -1034,6 +1037,7 @@
         firebase.initializeApp(config);
     </script>
 
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <!--   Core JS Files   -->
     <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
     <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
