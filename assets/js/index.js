@@ -20,8 +20,8 @@ function sendRegisterDataToFirebase() {
     var opalStart = $('#opalStart').is(":checked");
     var opalPro = $('#opalPro').is(":checked");
     var opalExtrem = $('#opalExtrem').is(":checked");
-    var opalFamily = $('#opalFamily').is(":checked");
-    var opalLocal = $('#opalLocal').is(":checked");
+    // var opalFamily = $('#opalFamily').is(":checked");
+    // var opalLocal = $('#opalLocal').is(":checked");
 
     var kidName = document.getElementById("kidName").value;
     var kidBorn = document.getElementById("kidBorn").value;
@@ -60,7 +60,7 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if( (parentName === "" || parentPhone === "" || parentMail === "") && (opalStart || opalLocal || opalPro)){
+    if( (parentName === "" || parentPhone === "" || parentMail === "") && (opalStart  || opalPro)){
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyplnte kontakt na rodiča');
         document.getElementById('formError').appendChild(div);
@@ -88,7 +88,7 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if (opalStart === false && opalPro === false && opalExtrem === false && opalLocal === false && opalFamily === false) {
+    if (opalStart === false && opalPro === false && opalExtrem === false) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyberte tábor ktorého sa chcete zúčastniť');
         document.getElementById('formError').appendChild(div);
@@ -99,8 +99,8 @@ function sendRegisterDataToFirebase() {
     if(opalStart === true) campsPicked++;
     if(opalPro === true) campsPicked++;
     if(opalExtrem === true) campsPicked++;
-    if(opalLocal === true) campsPicked++;
-    if(opalFamily === true) campsPicked++;
+    // if(opalLocal === true) campsPicked++;
+    // if(opalFamily === true) campsPicked++;
 
     if (campsPicked > 1) {
         var div = document.createElement('div');
@@ -123,8 +123,8 @@ function sendRegisterDataToFirebase() {
         if (opalStart === true) dbName = "start2019"
         if (opalPro === true) dbName = "pro2019"
         if (opalExtrem === true) dbName = "extrem2019"
-        if (opalLocal === true) dbName = "local2019"
-        if (opalFamily === true) dbName = "family2019"
+        // if (opalLocal === true) dbName = "local2019"
+        // if (opalFamily === true) dbName = "family2019"
 
         var tShirtSize ='';
         if (S === true) tShirtSize = "S"
@@ -155,8 +155,8 @@ function sendRegisterDataToFirebase() {
         $("#opalStart").prop("checked", false);
         $("#opalPro").prop("checked", false);
         $("#opalExtrem").prop("checked", false);
-        $("#opalLocal").prop("checked", false);
-        $("#opalFamily").prop("checked", false);
+        // $("#opalLocal").prop("checked", false);
+        // $("#opalFamily").prop("checked", false);
 
         document.getElementById("kidName").value = "";
         document.getElementById("kidBorn").value = "";
