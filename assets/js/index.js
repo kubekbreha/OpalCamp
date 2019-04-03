@@ -19,7 +19,7 @@ function sendRegisterDataToFirebase() {
 
     var opalStart = $('#opalStart').is(":checked");
     var opalPro = $('#opalPro').is(":checked");
-    var opalExtrem = $('#opalExtrem').is(":checked");
+    // var opalExtrem = $('#opalExtrem').is(":checked");
 
     var kidName = document.getElementById("kidName").value;
     var kidBorn = document.getElementById("kidBorn").value;
@@ -85,7 +85,7 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if (opalStart === false && opalPro === false && opalExtrem === false) {
+    if (opalStart === false && opalPro === false ) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyberte tábor ktorého sa chcete zúčastniť');
         document.getElementById('formError').appendChild(div);
@@ -95,7 +95,7 @@ function sendRegisterDataToFirebase() {
     var campsPicked = 0;
     if(opalStart === true) campsPicked++;
     if(opalPro === true) campsPicked++;
-    if(opalExtrem === true) campsPicked++;
+    // if(opalExtrem === true) campsPicked++;
 
     if (campsPicked > 1) {
         var div = document.createElement('div');
@@ -117,7 +117,7 @@ function sendRegisterDataToFirebase() {
 
         if (opalStart === true) dbName = "start2019"
         if (opalPro === true) dbName = "pro2019"
-        if (opalExtrem === true) dbName = "extrem2019"
+        // if (opalExtrem === true) dbName = "extrem2019"
 
         var tShirtSize ='';
         if (S === true) tShirtSize = "S"
@@ -146,7 +146,7 @@ function sendRegisterDataToFirebase() {
 
         $("#opalStart").prop("checked", false);
         $("#opalPro").prop("checked", false);
-        $("#opalExtrem").prop("checked", false);
+        // $("#opalExtrem").prop("checked", false);
 
         document.getElementById("kidName").value = "";
         document.getElementById("kidBorn").value = "";
