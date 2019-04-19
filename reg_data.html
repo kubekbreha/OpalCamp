@@ -4,11 +4,13 @@
 <head>
     <title>Provizorny zoznam</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body class="profile-page sidebar-collapse">
     <div class="container">
+        <h2>OC Pro 2019</h2>
         <table class="table">
             <thead>
                 <tr>
@@ -25,10 +27,71 @@
         </table>
     </div>
 
+    <div class="container">
+        <h2>OC Start 2019</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Meno</th>
+                    <th scope="col">Dat.Narodenia</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tel</th>
+                    <th scope="col">Tel. Rodic</th>
+                </tr>
+            </thead>
+            <tbody id="table2">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>OC Family 2019</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Meno</th>
+                    <th scope="col">Dat.Narodenia</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tel</th>
+                    <th scope="col">Tel. Rodic</th>
+                </tr>
+            </thead>
+            <tbody id="table3">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>OC Extrem 2019</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Meno</th>
+                    <th scope="col">Dat.Narodenia</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tel</th>
+                    <th scope="col">Tel. Rodic</th>
+                </tr>
+            </thead>
+            <tbody id="table4">
+            </tbody>
+        </table>
+    </div>
+
+
     <!-- Firebase  -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 
     <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
     <script>
@@ -46,14 +109,35 @@
         var database = firebase.database();
 
         var d1 = document.getElementById('table');
-        var leadsRef = database.ref('registration/ocCool2019');
-        leadsRef.on('value', function(snapshot) {
+        var leadsRef = database.ref('registration/pro2019');
+        leadsRef.on('value', function (snapshot) {
             var count = 0;
-            snapshot.forEach(function(childSnapshot) {
+            snapshot.forEach(function (childSnapshot) {
                 count++;
                 var childData = childSnapshot.val();
                 console.log(childData);
                 d1.insertAdjacentHTML('beforeend',
+                    '<tr>' +
+                    '<th scope="row">' + count + '</th>' +
+                    '<td>' + JSON.stringify(childData.kidName.kidName).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidBorn.kidBorn).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidMail.kidMail).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidPhone.kidPhone).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.parentPhone.parentPhone).replace("\"", "").replace("\"", "") + '</td>' +
+                    '</tr>');
+            });
+        });
+
+
+        var d2 = document.getElementById('table2');
+        var leadsRef2 = database.ref('registration/start2019');
+        leadsRef2.on('value', function (snapshot) {
+            var count = 0;
+            snapshot.forEach(function (childSnapshot) {
+                count++;
+                var childData = childSnapshot.val();
+                console.log(childData);
+                d2.insertAdjacentHTML('beforeend',
                     '<tr>' +
                     '<th scope="row">' + count + '</th>' +
                     '<td>' + JSON.stringify(childData.kidName.kidName).replace("\"", "").replace("\"", "") + '</td>' +
