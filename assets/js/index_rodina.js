@@ -17,13 +17,18 @@ $('#registration_form').submit(function () {
 function sendRegisterDataToFirebase() {
     var inputAllRight = true;
 
-    var kidName = document.getElementById("kidName").value;
-    var kidBorn = document.getElementById("kidBorn").value;
-    var kidPhone = document.getElementById("kidPhone").value;
-    var kidMail = document.getElementById("kidMail").value;
+    var manName = document.getElementById("manName").value;
+    var womanName = document.getElementById("womanName").value;
+    var kidCountOver = document.getElementById("kidCountOver").value;
+    var kidCountUntil = document.getElementById("kidCountUntil").value;
+    var mail = document.getElementById("mail").value;
+    var note = document.getElementById("note").note;
 
     var permisions = $('#privacy').is(":checked");
-    var car = $('#car').is(":checked");
+
+    var m1 = $('#m1').is(":checked");
+    var m2 = $('#m2').is(":checked");
+    var m3 = $('#m3').is(":checked");
 
     if (permisions == false) {
         var div = document.createElement('div');
@@ -32,13 +37,12 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if (kidName === "" || kidBorn === "" || kidPhone === "" || kidMail === "") {
+    if (mail === "") {
         var div = document.createElement('div');
-        div.innerHTML = getErrorMessage('Prosím vyplnte všetky potrebné polia');
+        div.innerHTML = getErrorMessage('Prosím vyplnte email');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
-
 
     var currentdate = new Date();
     var datetime = currentdate.getDate() + "/"
@@ -48,31 +52,41 @@ function sendRegisterDataToFirebase() {
         + currentdate.getMinutes() + ":"
         + currentdate.getSeconds();
 
+
+
     if(inputAllRight) {
-        var dbName ='extrem2019';
+        var dbName ='rodina2019';
+
+        var ubyt ='';
+        if (m1 === true) ubyt += "m1"
+        if (m2 === true) ubyt += "m2"
+        if (m3 === true) ubyt += "m3"
 
         var myJson = {
             registerTime: { datetime },
-            kidName: {kidName},
-            kidBorn: {kidBorn},
-            kidPhone: {kidPhone},
-            kidMail: {kidMail},
-            canCar:{car}
+            manName: {manName},
+            womanName: {womanName},
+            kidCountOver: {kidCountOver},
+            kidCountUntil: {kidCountUntil},
+            mail: {mail},
+            ubyt: {ubyt},
+            note: {note},
         };
         
         uploadNewRegistration(dbName, myJson);
 
-        $("#opalStart").prop("checked", false);
-        $("#opalPro").prop("checked", false);
-        // $("#opalExtrem").prop("checked", false);
-
-        document.getElementById("kidName").value = "";
-        document.getElementById("kidBorn").value = "";
-        document.getElementById("kidPhone").value = "";
-        document.getElementById("kidMail").value = "";
+        document.getElementById("manName").value = "";
+        document.getElementById("womanName").value = "";
+        document.getElementById("kidCountOver").value = "";
+        document.getElementById("kidCountUntil").value = "";
+        document.getElementById("mail").value = "";
+        document.getElementById("note").value = "";
 
         $("#privacy").prop("checked", false);
-        $('#car').prop("checked", false);
+       
+        $('#m1').prop("checked", false);
+        $('#m2').prop("checked", false);
+        $('#m3').prop("checked", false);
     }
 }
 
