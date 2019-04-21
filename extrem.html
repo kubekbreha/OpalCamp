@@ -21,6 +21,20 @@
     <!--Custom CSS-->
     <link href="assets/css/custom.css" rel="stylesheet" />
 
+    <style>
+        @media only screen and (min-width: 1024px) {
+            #image_height {
+                height: 35em;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            #image_height {
+                height: 25em;
+            }
+        }
+    </style>
+
 </head>
 
 <body class="profile-page sidebar-collapse">
@@ -49,36 +63,58 @@
                 <ul class="navbar-nav ml-auto">
 
                     <li class="nav-item">
-                        <a class="nav-link about_us" data-placement="bottom" href="#about_us"
+                        <a class="nav-link about_us" data-placement="bottom" href="http://www.opalcamp.sk/#about_us"
                             onclick="colapseSideNav()">O nás</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-placement="bottom" href="#oc_2019" onclick="colapseSideNav()">2019</a>
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#oc_siet"
+                            onclick="colapseSideNav()">Sieť</a>
+                    </li>
+
+                    <!-- <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                                    aria-haspopup="true" aria-expanded="false">
+                                                    Registrácia
+                                                </a>
+                                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                                    <a class="dropdown-item" href="#">Pro</a>
+                                                    <a class="dropdown-item" href="#">Start</a>
+                                                    <a class="dropdown-item" href="#">Rodina</a>
+                                                    <a class="dropdown-item" href="#">Denny</a>
+                                                    <a class="dropdown-item" href="#">Extrem</a>
+                                                </div>
+                                            </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#tabory"
+                            onclick="colapseSideNav()">Tábory</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-placement="bottom" href="#oc_siet" onclick="colapseSideNav()">Sieť</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-placement="bottom" href="#registration"
-                            onclick="colapseSideNav()">Registrácia</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-placement="bottom" href="#info"
-                            onclick="colapseSideNav()">Informácie</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" data-placement="bottom" href="#gallery"
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#gallery"
                             onclick="colapseSideNav()">Galéria</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" data-placement="bottom" href="#contact"
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#contact"
                             onclick="colapseSideNav()">Kontakt</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="stand.html" onclick="colapseSideNav()">PRO &
+                            START</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="extrem.html"
+                            onclick="colapseSideNav()">EXTREM</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="rodina.html"
+                            onclick="colapseSideNav()">RODINA</a>
                     </li>
 
 
@@ -101,8 +137,9 @@
         </div>
     </nav>
 
-
-    <div class="page-header header-filter" data-parallax="true"></div>
+    <div class="page-header header-filter" data-parallax="true"
+    style="background-image: url('assets/img/start_cut.png'); " id="image_height"></div>
+    
     <div class="main main-raised">
         <div class="profile-content">
             <div class="container">
