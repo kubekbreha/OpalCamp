@@ -46,24 +46,6 @@
     </div>
 
     <div class="container">
-        <h2>OC Family 2019</h2>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Meno</th>
-                    <th scope="col">Dat.Narodenia</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Tel</th>
-                    <th scope="col">Tel. Rodic</th>
-                </tr>
-            </thead>
-            <tbody id="table3">
-            </tbody>
-        </table>
-    </div>
-
-    <div class="container">
         <h2>OC Extrem 2019</h2>
         <table class="table">
             <thead>
@@ -73,7 +55,27 @@
                     <th scope="col">Dat.Narodenia</th>
                     <th scope="col">Email</th>
                     <th scope="col">Tel</th>
-                    <th scope="col">Tel. Rodic</th>
+                    <th scope="col">Auto</th>
+                </tr>
+            </thead>
+            <tbody id="table3">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container">
+        <h2>OC Family 2019</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Meno 1</th>
+                    <th scope="col">Meno 2</th>
+                    <th scope="col">Deti do 6</th>
+                    <th scope="col">Deti nad 6</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Ubytko</th>
+                    <th scope="col">Poznamka</th>
                 </tr>
             </thead>
             <tbody id="table4">
@@ -148,6 +150,51 @@
                     '</tr>');
             });
         });
+
+        var d3 = document.getElementById('table3');
+        var leadsRef3 = database.ref('registration/extrem2019');
+        leadsRef3.on('value', function (snapshot) {
+            var count = 0;
+            snapshot.forEach(function (childSnapshot) {
+                count++;
+                var childData = childSnapshot.val();
+                console.log(childData);
+                d3.insertAdjacentHTML('beforeend',
+                    '<tr>' +
+                    '<th scope="row">' + count + '</th>' +
+                    '<td>' + JSON.stringify(childData.kidName.kidName).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidBorn.kidBorn).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidMail.kidMail).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidPhone.kidPhone).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.canCar.car).replace("\"", "").replace("\"", "") + '</td>' +
+                    '</tr>');
+            });
+        });
+
+        var d4 = document.getElementById('table4');
+        var leadsRef4 = database.ref('registration/rodina2019');
+        leadsRef4.on('value', function (snapshot) {
+            var count = 0;
+            snapshot.forEach(function (childSnapshot) {
+                count++;
+                var childData = childSnapshot.val();
+                console.log(childData);
+                d4.insertAdjacentHTML('beforeend',
+                    '<tr>' +
+                    '<th scope="row">' + count + '</th>' +
+                    '<td>' + JSON.stringify(childData.manName.manName).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.womanName.womanName).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidCountUntil.kidCountUntil).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidCountOver.kidCountOver).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.email.mail).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.whereUbyt.ubyt).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.noteToOrg.note).replace("\"", "").replace("\"", "") + '</td>' +
+                    '</tr>');
+            });
+        });
+
+
+
     </script>
 </body>
 
