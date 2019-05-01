@@ -40,7 +40,7 @@ function sendRegisterDataToFirebase() {
     var M = $('#M').is(":checked");
     var L = $('#L').is(":checked");
     var XL = $('#XL').is(":checked");
-    
+
     var permisions = $('#privacy').is(":checked");
 
     if (permisions == false) {
@@ -57,14 +57,14 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if( (parentName === "" || parentPhone === "" || parentMail === "") && (opalStart  || opalPro)){
+    if ((parentName === "" || parentPhone === "" || parentMail === "") && (opalStart || opalPro)) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyplnte kontakt na rodiča');
         document.getElementById('formError').appendChild(div);
         inputAllRight = false;
     }
 
-    if (S == false && M == false && L == false && XL== false) {
+    if (S == false && M == false && L == false && XL == false) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyberte si veľkost trička');
         document.getElementById('formError').appendChild(div);
@@ -72,11 +72,11 @@ function sendRegisterDataToFirebase() {
     }
 
     var tShirtPicked = 0;
-  
-    if(S == true) tShirtPicked++;
-    if(M == true) tShirtPicked++;
-    if(L == true) tShirtPicked++;
-    if(XL == true) tShirtPicked++;
+
+    if (S == true) tShirtPicked++;
+    if (M == true) tShirtPicked++;
+    if (L == true) tShirtPicked++;
+    if (XL == true) tShirtPicked++;
 
     if (tShirtPicked > 1) {
         var div = document.createElement('div');
@@ -85,7 +85,7 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if (opalStart === false && opalPro === false ) {
+    if (opalStart === false && opalPro === false) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyberte tábor ktorého sa chcete zúčastniť');
         document.getElementById('formError').appendChild(div);
@@ -93,8 +93,8 @@ function sendRegisterDataToFirebase() {
     }
 
     var campsPicked = 0;
-    if(opalStart === true) campsPicked++;
-    if(opalPro === true) campsPicked++;
+    if (opalStart === true) campsPicked++;
+    if (opalPro === true) campsPicked++;
     // if(opalExtrem === true) campsPicked++;
 
     if (campsPicked > 1) {
@@ -106,20 +106,20 @@ function sendRegisterDataToFirebase() {
 
     var currentdate = new Date();
     var datetime = currentdate.getDate() + "/"
-        + (currentdate.getMonth()+1)  + "/"
+        + (currentdate.getMonth() + 1) + "/"
         + currentdate.getFullYear() + " @ "
         + currentdate.getHours() + ":"
         + currentdate.getMinutes() + ":"
         + currentdate.getSeconds();
 
-    if(inputAllRight) {
-        var dbName ='';
+    if (inputAllRight) {
+        var dbName = '';
 
         if (opalStart === true) dbName = "start2019"
         if (opalPro === true) dbName = "pro2019"
         // if (opalExtrem === true) dbName = "extrem2019"
 
-        var tShirtSize ='';
+        var tShirtSize = '';
         if (S === true) tShirtSize = "S"
         if (M === true) tShirtSize = "M"
         if (L === true) tShirtSize = "L"
@@ -128,21 +128,29 @@ function sendRegisterDataToFirebase() {
 
         var myJson = {
             registerTime: { datetime },
-            kidName: {kidName},
-            kidBorn: {kidBorn},
-            kidPhone: {kidPhone},
-            kidMail: {kidMail},
-            kidCity: {kidCity},
-            kidSchool: {kidSchool},
-            kidHealth: {kidHealth},
-            kidNote: {kidNote},
-            parentName: {parentName},
-            parentPhone: {parentPhone},
-            parentMail: {parentMail},
-            tShirt:{tShirtSize}
+            kidName: { kidName },
+            kidBorn: { kidBorn },
+            kidPhone: { kidPhone },
+            kidMail: { kidMail },
+            kidCity: { kidCity },
+            kidSchool: { kidSchool },
+            kidHealth: { kidHealth },
+            kidNote: { kidNote },
+            parentName: { parentName },
+            parentPhone: { parentPhone },
+            parentMail: { parentMail },
+            tShirt: { tShirtSize }
         };
-        
+
         uploadNewRegistration(dbName, myJson);
+    
+    
+        var $form = $('form');
+        var mail = $("input[id=kidMail]").val();
+        register($form, opalPro, mail);
+        var mailParent = $("input[id=parentMail]").val();
+        register($form, opalPro, mailParent);
+
 
         $("#opalStart").prop("checked", false);
         $("#opalPro").prop("checked", false);
@@ -173,8 +181,8 @@ function sendRegisterDataToFirebase() {
 }
 
 
-function uploadNewRegistration(camp ,imageUrl) {
-    var refAlbum = database.ref('registration/'+ camp);
+function uploadNewRegistration(camp, imageUrl) {
+    var refAlbum = database.ref('registration/' + camp);
     refAlbum.push(imageUrl).then(function onSuccess(res) {
         console.log(res);
         var div = document.createElement('div');
@@ -228,3 +236,32 @@ function getSuccessMessage() {
         '</div>';
 }
 
+
+function register($form, pro, mail) {
+    var mailData = 'EMAIL=' + mail.replace("@", "%40");
+    var urlHtml = $form.attr('action');
+
+    if (pro == true) {
+        urlHtml = urlHtml + '16ba81aa1e&c=?';
+    } else {
+        urlHtml = urlHtml + '1be63aced3&c=?';
+    }
+  
+    $.ajax({
+        type: $form.attr('method'),
+        url: urlHtml,
+        data: mailData,
+        cache: false,
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        error: function (err) { alert("Could not connect to the registration server. Please try again later."); },
+        success: function (data) {
+            if (data.result != "success") {
+                console.log(data);
+                console.log("something went wrong");
+            } else {
+                console.log("sucess");
+            }
+        }
+    });
+}

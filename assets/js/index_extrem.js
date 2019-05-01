@@ -139,8 +139,8 @@ function getSuccessMessage() {
 
 function register($form) {
     var mail = $("input[id=kidMail]").val();
-    var mailData = 'EMAIL=' + mail.replace("@", "%40"); + '&b_d8a9883d28442c8daa546a493_86eb5b3e6e=';
-
+    var mailData = 'EMAIL=' + mail.replace("@", "%40");
+    
     $.ajax({
         type: $form.attr('method'),
         url: $form.attr('action'),

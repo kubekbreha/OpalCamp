@@ -75,6 +75,9 @@ function sendRegisterDataToFirebase() {
         
         uploadNewRegistration(dbName, myJson);
 
+        var $form = $('form');
+        register($form);
+
         document.getElementById("manName").value = "";
         document.getElementById("womanName").value = "";
         document.getElementById("kidCountOver").value = "";
@@ -146,3 +149,26 @@ function getSuccessMessage() {
         '</div>';
 }
 
+
+
+function register($form) {
+    var mail = $("input[id=mail]").val();
+    var mailData = 'EMAIL=' + mail.replace("@", "%40");
+
+    $.ajax({
+        type: $form.attr('method'),
+        url: $form.attr('action'),
+        data: mailData,
+        cache: false,
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        error: function (err) { alert("Could not connect to the registration server. Please try again later."); },
+        success: function (data) {
+            if (data.result != "success") {
+                console.log("something went wrong");
+            } else {
+                console.log("sucess");
+            }
+        }
+    });
+}
