@@ -42,25 +42,29 @@ function sendRegisterDataToFirebase() {
 
     var currentdate = new Date();
     var datetime = currentdate.getDate() + "/"
-        + (currentdate.getMonth()+1)  + "/"
+        + (currentdate.getMonth() + 1) + "/"
         + currentdate.getFullYear() + " @ "
         + currentdate.getHours() + ":"
         + currentdate.getMinutes() + ":"
         + currentdate.getSeconds();
 
-    if(inputAllRight) {
-        var dbName ='extrem2019';
+    if (inputAllRight) {
+        var dbName = 'extrem2019';
 
         var myJson = {
             registerTime: { datetime },
-            kidName: {kidName},
-            kidBorn: {kidBorn},
-            kidPhone: {kidPhone},
-            kidMail: {kidMail},
-            canCar:{car}
+            kidName: { kidName },
+            kidBorn: { kidBorn },
+            kidPhone: { kidPhone },
+            kidMail: { kidMail },
+            canCar: { car }
         };
-        
+
         uploadNewRegistration(dbName, myJson);
+
+        var $form = $('form');
+        register($form);
+
 
         $("#opalStart").prop("checked", false);
         $("#opalPro").prop("checked", false);
@@ -77,8 +81,8 @@ function sendRegisterDataToFirebase() {
 }
 
 
-function uploadNewRegistration(camp ,imageUrl) {
-    var refAlbum = database.ref('registration/'+ camp);
+function uploadNewRegistration(camp, imageUrl) {
+    var refAlbum = database.ref('registration/' + camp);
     refAlbum.push(imageUrl).then(function onSuccess(res) {
         console.log(res);
         var div = document.createElement('div');
@@ -132,3 +136,25 @@ function getSuccessMessage() {
         '</div>';
 }
 
+
+function register($form) {
+    var mail = $("input[id=kidMail]").val();
+    var mailData = 'EMAIL=' + mail.replace("@", "%40"); + '&b_d8a9883d28442c8daa546a493_86eb5b3e6e=';
+
+    $.ajax({
+        type: $form.attr('method'),
+        url: $form.attr('action'),
+        data: mailData,
+        cache: false,
+        dataType: 'json',
+        contentType: "application/json; charset=utf-8",
+        error: function (err) { alert("Could not connect to the registration server. Please try again later."); },
+        success: function (data) {
+            if (data.result != "success") {
+                console.log("something went wrong");
+            } else {
+                console.log("sucess");
+            }
+        }
+    });
+}
