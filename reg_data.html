@@ -11,6 +11,7 @@
 <body class="profile-page sidebar-collapse">
     <div class="container">
         <h2>OC Pro 2019</h2>
+        <h4 id="trickaPro"></h4>
         <table class="table">
             <thead>
                 <tr>
@@ -21,6 +22,7 @@
                     <th scope="col">Tel</th>
                     <th scope="col">Mesto</th>
                     <th scope="col">Tel. Rodic</th>
+                    <th scope="col">Tricko</th>
                 </tr>
             </thead>
             <tbody id="table">
@@ -30,6 +32,7 @@
 
     <div class="container">
         <h2>OC Start 2019</h2>
+        <h4 id="trickaStart"></h4>
         <table class="table">
             <thead>
                 <tr>
@@ -40,6 +43,7 @@
                     <th scope="col">Tel</th>
                     <th scope="col">Mesto</th>
                     <th scope="col">Tel. Rodic</th>
+                    <th scope="col">Tricko</th>
                 </tr>
             </thead>
             <tbody id="table2">
@@ -113,9 +117,17 @@
         var database = firebase.database();
 
         var d1 = document.getElementById('table');
+        var trickaPro = document.getElementById('trickaPro');
+
         var leadsRef = database.ref('registration/pro2019');
         leadsRef.on('value', function (snapshot) {
             var count = 0;
+
+            var s = 0;
+            var m = 0;
+            var l = 0;
+            var xl = 0;
+
             snapshot.forEach(function (childSnapshot) {
                 count++;
                 var childData = childSnapshot.val();
@@ -129,15 +141,39 @@
                     '<td>' + JSON.stringify(childData.kidPhone.kidPhone).replace("\"", "").replace("\"", "") + '</td>' +
                     '<td>' + JSON.stringify(childData.kidCity.kidCity).replace("\"", "").replace("\"", "") + '</td>' +
                     '<td>' + JSON.stringify(childData.parentPhone.parentPhone).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.tShirt.tShirtSize).replace("\"", "").replace("\"", "") + '</td>' +
                     '</tr>');
+
+                if (childData.tShirt.tShirtSize == 'M') {
+                    m++;
+                } else if (childData.tShirt.tShirtSize == 'L') {
+                    l++;
+                } else if (childData.tShirt.tShirtSize == 'S') {
+                    s++;
+                } else if (childData.tShirt.tShirtSize == 'XL') {
+                    xl++;
+                }
             });
+
+            trickaPro.insertAdjacentHTML('beforeend', "Pocty triciek ..... S=" + s + "         M=" + m + "         L=" + l + "         XL=" + xl);
+
         });
 
 
+
+
         var d2 = document.getElementById('table2');
+        var trickaStart = document.getElementById('trickaStart');
+
         var leadsRef2 = database.ref('registration/start2019');
         leadsRef2.on('value', function (snapshot) {
             var count = 0;
+
+            var s = 0;
+            var m = 0;
+            var l = 0;
+            var xl = 0;
+
             snapshot.forEach(function (childSnapshot) {
                 count++;
                 var childData = childSnapshot.val();
@@ -151,8 +187,23 @@
                     '<td>' + JSON.stringify(childData.kidPhone.kidPhone).replace("\"", "").replace("\"", "") + '</td>' +
                     '<td>' + JSON.stringify(childData.kidCity.kidCity).replace("\"", "").replace("\"", "") + '</td>' +
                     '<td>' + JSON.stringify(childData.parentPhone.parentPhone).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.tShirt.tShirtSize).replace("\"", "").replace("\"", "") + '</td>' +
                     '</tr>');
+              
+                if (childData.tShirt.tShirtSize == 'M') {
+                    m++;
+                } else if (childData.tShirt.tShirtSize == 'L') {
+                    l++;
+                } else if (childData.tShirt.tShirtSize == 'S') {
+                    s++;
+                } else if (childData.tShirt.tShirtSize == 'XL') {
+                    xl++;
+                }
+
             });
+
+            trickaStart.insertAdjacentHTML('beforeend', "Pocty triciek ..... S=" + s + "         M=" + m + "         L=" + l + "         XL=" + xl);
+
         });
 
         var d3 = document.getElementById('table3');
