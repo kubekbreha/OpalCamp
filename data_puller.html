@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Provizorny zoznam</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="profile-page sidebar-collapse">
+
+    <!-- Firebase  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+
+
+        function exportToCsv(filename, rows) {
+            var processRow = function (row) {
+                var finalVal = '';
+                for (var j = 0; j < row.length; j++) {
+                    var innerValue = row[j] === null ? '' : row[j].toString();
+                    if (row[j] instanceof Date) {
+                        innerValue = row[j].toLocaleString();
+                    };
+                    var result = innerValue.replace(/"/g, '""');
+                    if (result.search(/("|,|\n)/g) >= 0)
+                        result = '"' + result + '"';
+                    if (j > 0)
+                        finalVal += ',';
+                    finalVal += result;
+                }
+                return finalVal + '\n';
+            };
+
+            var csvFile = '';
+            for (var i = 0; i < rows.length; i++) {
+                csvFile += processRow(rows[i]);
+            }
+
+            var blob = new Blob([csvFile], { type: 'text/csv;charset=utf-8;' });
+            if (navigator.msSaveBlob) { // IE 10+
+                navigator.msSaveBlob(blob, filename);
+            } else {
+                var link = document.createElement("a");
+                if (link.download !== undefined) { // feature detection
+                    // Browsers that support HTML5 download attribute
+                    var url = URL.createObjectURL(blob);
+                    link.setAttribute("href", url);
+                    link.setAttribute("download", filename);
+                    link.style.visibility = 'hidden';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                }
+            }
+        }
+
+
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",
+            authDomain: "opal-1526306570324.firebaseapp.com",
+            databaseURL: "https://opal-1526306570324.firebaseio.com",
+            projectId: "opal-1526306570324",
+            storageBucket: "opal-1526306570324.appspot.com",
+            messagingSenderId: "809694766352"
+        };
+
+        firebase.initializeApp(config);
+        var database = firebase.database();
+
+        var d1 = document.getElementById('table');
+        var trickaPro = document.getElementById('trickaPro');
+
+        var leadsRef = database.ref('registration/start2019');
+
+
+        leadsRef.on('value', function (snapshot) {
+
+            var arr_par = [];
+
+            snapshot.forEach(function (childSnapshot) {
+                var childData = childSnapshot.val();
+                var arr = [];
+                arr.push(JSON.stringify(childData.kidName.kidName).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.kidBorn.kidBorn).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.kidMail.kidMail).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.kidPhone.kidPhone).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.kidCity.kidCity).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.kidHealth.kidHealth).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.kidNote.kidNote).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.kidSchool.kidSchool).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.parentName.parentName).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.parentPhone.parentPhone).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.parentMail.parentMail).replace("\"", "").replace("\"", ""));
+                arr.push(JSON.stringify(childData.tShirt.tShirtSize).replace("\"", "").replace("\"", ""));
+                arr_par.push(arr);
+            });
+
+            console.log(arr_par);
+            exportToCsv('export.csv', arr_par)
+
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
