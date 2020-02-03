@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Provizorny zoznam</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body class="profile-page sidebar-collapse">
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Meno</th>
+                    <th scope="col">Dat.Narodenia</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Tel</th>
+                    <th scope="col">Tel. Rodic</th>
+                    <th scope="col">Poznamka</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Firebase  -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",
+            authDomain: "opal-1526306570324.firebaseapp.com",
+            databaseURL: "https://opal-1526306570324.firebaseio.com",
+            projectId: "opal-1526306570324",
+            storageBucket: "opal-1526306570324.appspot.com",
+            messagingSenderId: "809694766352"
+        };
+
+        firebase.initializeApp(config);
+        var database = firebase.database();
+
+        var d1 = document.getElementById('table');
+        var leadsRef = database.ref('registration/pro2020');
+        leadsRef.on('value', function(snapshot) {
+            var count = 0;
+            snapshot.forEach(function(childSnapshot) {
+                count++;
+                var childData = childSnapshot.val();
+                console.log(childData);
+                d1.insertAdjacentHTML('beforeend',
+                    '<tr>' +
+                    '<th scope="row">' + count + '</th>' +
+                    '<td>' + JSON.stringify(childData.kidName.kidName).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidBorn.kidBorn).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidMail.kidMail).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidPhone.kidPhone).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.parentPhone.parentPhone).replace("\"", "").replace("\"", "") + '</td>' +
+                    '<td>' + JSON.stringify(childData.kidNote.kidNote).replace("\"", "").replace("\"", "") + '</td>' +
+                    '</tr>');
+            });
+        });
+    </script>
+</body>
+
+</html>
