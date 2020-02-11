@@ -1,0 +1,52 @@
+const SIZE_KEYWORDS = ['S', 'XS', 'M', 'L', 'XL', 'XXL', '30', '32', '34', '36', '38', '40'];
+
+const INPUT = [
+    'Lady Dress 38',
+    'Lady Dress 36',
+    'ONLY Dámske šaty Lilli 3/4 Dress Jrs Black XL',
+    'ONLY Dámske šaty Lilli 3/4 Dress Jrs Black XXL',
+    'ONLY Dámske šaty Lilli 3/4 Dress Jrs S Red',
+    'ONLY Dámske šaty Lilli 3/4 Dress Jrs M Red',
+    'Lady Dress 34',
+    'Lady Dress S',
+    'Lady Dress XL',
+    'Pieces Dámske šaty Billo Strap Dress Noos S Black',
+    'Pieces Dámske šaty Billo Strap Dress Noos M Black',
+    'Pieces Dámske šaty Billo Strap Dress Noos Magenta XL',
+    'Vero Moda Dámske šaty Story Curve Ls Rollneck Dress Purple Velvet',
+    'Jacqueline de Yong Dámske šaty Star Strap Dress Wvn Navy Blazer'
+];
+
+var pattern = ''
+for (key of SIZE_KEYWORDS) {
+    pattern += ' ' + key + '$|'
+}
+pattern = pattern.slice(0, -1);
+pattern += "|"
+for (key of SIZE_KEYWORDS) {
+    pattern += key + ' ' + '|'
+}
+var par = pattern.slice(0, -1);
+
+console.log(par);
+
+var OUTPUT = {}
+for (line of INPUT) {
+    var patt = new RegExp(par);
+    var res = patt.exec(line);
+    console.log(res);
+
+    if (res != null) {
+        var key = line.replace(res[0], '');
+        if (OUTPUT[key] == undefined) {
+            OUTPUT[key] = [];
+            OUTPUT[key].push(res[0].replace(" ", ""));
+        } else {
+            OUTPUT[key].push(res[0].replace(" ", ""));
+        }
+    } else {
+        OUTPUT[line] = [];
+    }
+}
+
+console.log(OUTPUT);

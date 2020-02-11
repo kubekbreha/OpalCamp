@@ -85,7 +85,7 @@ function sendRegisterDataToFirebase() {
         inputAllRight = false;
     }
 
-    if (opalStart === false && opalPro === false) {
+    if (opalStart === false && opalPro === false && opalStart2 === false) {
         var div = document.createElement('div');
         div.innerHTML = getErrorMessage('Prosím vyberte tábor ktorého sa chcete zúčastniť');
         document.getElementById('formError').appendChild(div);
