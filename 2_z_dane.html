@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/opal_logo.png">
+    <link rel="icon" type="image/png" href="assets/img/opal_logo_transparent.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Opál Camp
+    </title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+        name='viewport' />
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    <link href="assets/css/material-kit.css?v=2.0.3" rel="stylesheet" />
+
+    <!--Custom CSS-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+
+    <style>
+        @media only screen and (min-width: 1024px) {
+            #image_height {
+                height: 35em;
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            #image_height {
+                height: 25em;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="profile-page sidebar-collapse">
+
+    <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100"
+        id="sectionsNav">
+        <div class="container">
+
+            <!--Mobile version menu hamburger-->
+            <div class="navbar-translate">
+                <img onclick="topFunction()" src="assets/img/opal_logo_transparent.png" class="img-fluid"
+                    style="height: 4%; width:  4%;">
+                <a href="javascript:void(0);" class="navbar-brand" onclick="topFunction()" style="margin-left: 1em;">
+                    Opál Camp </a>
+                <button id="navbar-toggler" class="navbar-toggler" type="button" data-toggle="collapse"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+            <!--Top bar items-->
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+
+                  
+
+
+                    <li class="nav-item">
+                        <a class="nav-link about_us" data-placement="bottom" href="http://www.opalcamp.sk/#about_us"
+                            onclick="colapseSideNav()">O nás</a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#oc_siet"
+                            onclick="colapseSideNav()">Sieť</a>
+                    </li> -->
+
+                    <!-- <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                                            aria-haspopup="true" aria-expanded="false">
+                                            Registrácia
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                            <a class="dropdown-item" href="#">Pro</a>
+                                            <a class="dropdown-item" href="#">Start</a>
+                                            <a class="dropdown-item" href="#">Rodina</a>
+                                            <a class="dropdown-item" href="#">Denny</a>
+                                            <a class="dropdown-item" href="#">Extrem</a>
+                                        </div>
+                                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#tabory"
+                            onclick="colapseSideNav()">Tábory</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#nastenka"
+                            onclick="colapseSideNav()">Nástenka</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#taborisko"
+                            onclick="colapseSideNav()">Táborisko</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#registration"
+                            onclick="colapseSideNav()">Registrácia</a>
+                    </li>
+
+
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#gallery"
+                            onclick="colapseSideNav()">Galéria</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="http://www.opalcamp.sk/#contact"
+                            onclick="colapseSideNav()">Kontakt</a>
+                    </li>
+                    <!-- 
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="stand.html" onclick="colapseSideNav()">PRO &
+                            START</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="extrem.html"
+                            onclick="colapseSideNav()">EXTREM</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" data-placement="bottom" href="rodina.html"
+                            onclick="colapseSideNav()">RODINA</a>
+                    </li> -->
+
+                    <li class="nav-item">
+                        <a class="nav-link about_us" data-placement="bottom" href="http://www.opalcamp.sk/2_z_dane.html"
+                            onclick="colapseSideNav()">2%</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
+                            href="https://www.facebook.com/Opál-Camp-146464582089712" target="_blank"
+                            data-original-title="Lajkni nás na Facebooku" onclick="colapseSideNav()">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="" data-placement="bottom"
+                            href="https://www.instagram.com/OpalCamp" target="_blank"
+                            data-original-title="Followni nás na Instagrame" onclick="colapseSideNav()">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="page-header header-filter" data-parallax="true"
+        style="background-image: url('assets/img/start_cut.png'); " id="image_height"></div>
+
+    <div class="main main-raised">
+        <div class="profile-content">
+            <div class="container">
+
+                <!--Main info-->
+                <div id="oNas" class="section text-center">
+                    <div class="row">
+                        <div class="col-md-12 ml-auto mr-auto">
+                            <h1 class="title">Ako nás podporiť?</h1>
+                            <!-- <h3 class="title">Outdoorový pobyt pre mladé rodiny.</h3> -->
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="title">Chcete podporiť naše projekty a venovať nám 2% zo svojich zaplatených
+                                daní?</h3>
+                            <h4>Podľa zákona o dani z príjmov môže daňovník poukázať 2% zaplatenej dane niektorej
+                                neziskovej organizácii, ktorá je zaregistrovaná v centrálnom zozname Notárskej komory
+                                SR.</h4>
+                            <h4>Občianske združenie TriP sa obracia na vás so žiadosťou o poskytnutie 2% z vašich daní.
+                                V prípade, že sa rozhodnete venovať nám 2% zo svojich daní, môžete postupovať podľa
+                                pokynov nižšie. V prípade akýchkoľvek otázok nás neváhajte kontaktovať.</h4>
+                            <h3 class="title">Ďakujeme za podporu.</h3>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="nasehodnoty" class="section text-center" style="background-color: #FBB24B;">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12 ml-auto mr-auto">
+                        <h1 class="title">Súbory na stiahnutie</h1>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                       
+                        <h4><a href="assets/pdf/Potvrdenie-o-zaplateni-dane-z-prijmov-zo-zavislej-cinnosti_01-2019.pdf">Potvrdenie o zaplatení dane z prijmu(2019)</a></h4>
+                        <h4><a href="assets/pdf/Vyhlasenie-o-poukazani-podielu-zaplatenej-dane-z-prijmov-fyzickej-osoby TriP.pdf">Vyhlásenie o poukázaní 2% pre TriP (2019)</a></h4>
+                        <h4><a href="assets/pdf/2 materiál na web.docx">Brožúra TriP 2% </a></h4>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="section text-center text-white" style="background-color: #4C4C4D;">
+            <div class="container">
+                <div class="row ">
+
+
+                    <div class="col-md-12 ml-auto mr-auto text-center">
+                        <h2 class="title text-white">Pomocné pokyny pre venovanie 2% z daní:</h2>
+
+                        <h2 class="title text-white">Fyzické osoby:</h2>
+
+
+                        <h3 class="title text-white">A. Ročné zúčtovanie preddavkov Vám vykonáva zamestnávateľ</h3>
+
+                        <h4>
+                            1. Požiadajte Vášho zamestnávateľa (mzdová učtáreň, ekonomické oddelenie) o vyplnenie a
+                            potvrdenie tlačiva Potvrdenie o zaplatení dane z príjmov zo závislej činnosti
+                        </h4>
+
+                        <h4>
+                            2. Vyplňte tlačivo Vyhlásenie o poukázaní sumy do výšky 2% zaplatenej dane. Výška
+                            poukázaného podielu musí byť minimálne 3 € a môže byť poukázaná iba v prospech jednej
+                            neziskovej organizácie.
+                        </h4>
+
+                        <h4>
+                            3. Vyplnené tlačivá: “Potvrdenie o zaplatení dane z príjmov (2019)” a “Vyhlásenie o
+                            poukázaní 2% (2019)”zašlite (doručte) najneskôr do 30. apríla na daňový úrad podľa Vášho
+                            bydliska.
+                        </h4>
+
+                        <h3 class="title text-white">B. Daňové priznanie si podávate sami</h3>
+
+                        <h4>
+                            1. Vyhlásenie o poukázaní podielu zaplatenej dane z príjmov fyzickej osoby je priamo na
+                            tlačive daňového priznania. Výška poukázaného podielu musí byť minimálne 3 € a môže byť
+                            poukázaná iba v prospech jednej neziskovej organizácie.
+                        </h4>
+
+                        <h4>
+                            2. Na poslednej strane daňového priznania srávne vyplňte údaje o prijímateľovi 2%
+                        </h4>
+
+                        <h4>
+                            Názov: TriP
+                        </h4>
+                        <h4>
+                            Sídlo: Hermanovce nad Topľou č. 213 ,PSČ 09434
+                        </h4>
+                        <h4>
+                            Právna forma: Občianske združenie
+                        </h4>
+                        <h4>
+                            IČO: 50873644
+                        </h4>
+
+
+                        <h2 class="title text-white">Právnické osoby:</h2>
+
+
+                        <h4>
+                            1. Vyhlásenie o poukázaní podielu zaplatenej dane z príjmov právnickej osoby je priamo na
+                            tlačive daňového priznania. Výška poukázaného podielu môže byť rozdelená v prospech
+                            viacerých neziskových organizácií a minimálne suma je 8 € na jedného prijímateľa.
+
+                        </h4>
+
+                        <h4>
+                            2. Na poslednej strane daňového priznania správne vyplňte údaje o prijímateľovi 2%
+                        </h4>
+
+                        <h4>
+                            Názov: TriP
+                        </h4>
+                        <h4>
+                            Sídlo: Hermanovce nad Topľou č. 213 ,PSČ 09434
+                        </h4>
+                        <h4>
+                            Právna forma: Občianske združenie
+                        </h4>
+                        <h4>
+                            IČO: 50873644
+                        </h4>
+                        <h4>
+                            3. Upozornenie:
+                            Ak ste právnická osoba (s.r.o., a pod.) môžete nám venovať 2% z daní iba v tom prípade, ak
+                            do termínu odovzdania daňového priznania venujete buď nám alebo inej verejnoprospešnej
+                            organizácií (nemôže to byť cirkevný zbor) dar vo výške 0,5% z daní. Ak ste nevenovali
+                            žiadnej organizácií takýto dar, potom môžete venovať iba 1% z daní. Je potrebné označiť to
+                            priamo v daňovom priznaní PO – časť IV. Dar treba mať potvrdený darovacou zmluvou. Ak sa ňou
+                            neviete preukázať, môžete byť sankcionovaní . Toto sa musí uskutočniť do 31. marca.
+
+                        </h4>
+
+
+
+
+                        <h2 class="title text-white">Dobrovoľníci:</h2>
+
+                        Pre viac informácii využite aj tento kontakt: Slavomír Krupa, mob: 0904663611, email:
+                        slavomir.krupa.ml@gmail.com
+
+
+                        <h4>
+                            Ak ste odpracovali ako dobrovoľníci buď v TriP alebo v inej neziskovej organizácií v roku
+                            2019 minimálne 40 hodín, môžete venovať dokonca až 3% z daní. Vtedy sa treba preukázať
+                            potvrdením o odpracovaní dobrovoľníckych hodín a tiež dobrovoľníckou zmluvou.
+                            Viac informácii nájdete na nasledujúcom odkaze: <a
+                                href="http://rozhodni.sk/poukazatel/ako-mozu-dobrovolnici-poukazat-3-z-dane/">Ako môžu
+                                dobrovoľníci poukázať 3% z dane?</a>
+                        </h4>
+
+                        <h4>
+                            Pre viac informácii využite aj tento kontakt: </h4>
+                        <h4>
+                            Slavomír Krupa
+                        </h4>
+                        <h4>
+                            mob: 0904663611
+                        </h4>
+                        <h4>
+                            email: slavomir.krupa.ml@gmail.com
+                        </h4>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <footer class="footer footer-default">
+        <div class="container">
+            <nav class="float-left">
+                <ul>
+                    <li>
+                        <a href="https://www.cbhermanovce.sk">
+                            CB Hermanovce
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+            <div class="copyright float-right">
+                &copy;2020 , made with <i class="material-icons">favorite</i> by
+                <a href="https://github.com/kubekbreha" target="_blank">Kubo</a>.
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Firebase  -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCLG0Uqpl79OD1NkP8txdA_fFR2QHscK4w",
+            authDomain: "opal-1526306570324.firebaseapp.com",
+            databaseURL: "https://opal-1526306570324.firebaseio.com",
+            projectId: "opal-1526306570324",
+            storageBucket: "opal-1526306570324.appspot.com",
+            messagingSenderId: "809694766352"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <script src="assets/js/plugins/moment.min.js"></script>
+    <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+    <script src="assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
+    <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+    <script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+    <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+    <script src="assets/js/material-kit.js?v=2.0.3" type="text/javascript"></script>
+    <script src="assets/js/index.js" type="text/javascript"></script>
+
+</body>
+
+</html>
